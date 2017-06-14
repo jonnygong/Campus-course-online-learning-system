@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>课程修改</title>
+    <!-- load css -->
+     <link rel="stylesheet" href="../css/layui.css"  media="all">
+
+</head>
+<style type="text/css">
+    th,td,table{
+        text-align: center;
+    }
+    .layui-table td, .layui-table th{padding: 0px;width: 50px;height: 25px;}
+</style>
+
+<body style="width: 700px; height: 300px;padding:20px; margin: 0 auto;">
+<select name="city" lay-verify="" style=" height: 34px; width:140px;  float: left;margin-left: 15px;">
+  <option value="">请选择专业</option>
+  <option value="010">网站开发</option>
+  <option value="021">移动互联</option>
+  <option value="0571">数字媒体</option>
+  <option value="0571">信息管理</option>
+  <option value="0571">电器自动化</option>
+  <option value="0571">痰应用电子技术</option>
+</select>
+	  <span style="float:left; height:30px; font-size:14px; margin-top:5px; margin-left:90px; color:#282B33; font-weight: bold;
+">课程名称:</span>      
+    <input type="text" name="title" required  lay-verify="required" autocomplete="off" style=" height: 30px; width:120px; float:left; margin-left:15px;">
+      
+      <button class="layui-btn" style=" float: right; margin-right: 10px;">查询</button>
+      
+<!-- 按钮代码 -->
+    <!-- 表格代码 -->
+    <div style="padding: 10px;clear: both;">
+        <table class="layui-table"  >
+  <colgroup>
+    <col width="100">
+    <col width="100">
+    <col width="80">
+    <col width="80">
+  </colgroup>
+  
+  <thead >
+    <tr>
+      <th style="text-align: center;">课程名称</th>
+      <th style="text-align: center;">课程专业</th>
+      <th style="text-align: center;">主讲老师</th>
+      <th style="text-align: center;">操作</th>
+      
+    </tr> 
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td>网站架构</td>
+      <td>网站开发</td>
+      <td>吴龙</td>
+      <td><a class="showBtn " style="" data-width="550px" data-height="400px" data-url="adm_t_c_upd_next.html"style="float: right;"  data-title="修改内容">修改</a></td>
+
+
+    </tr>
+    <tr>
+      <td>网站架构</td>
+      <td>网站开发</td>
+      <td>吴龙</td>
+      <td><a class="showBtn " style="" data-width="550px" data-height="400px" data-url="adm_t_c_upd_next.html" style="float: right;"  data-title="修改内容">修改</a></td>
+
+
+
+    </tr>
+    
+    <tr>
+     <td>网站架构</td>
+      <td>网站开发</td>
+      <td>吴龙</td>
+      <td><a class="showBtn " style="" data-width="550px" data-height="400px" data-url="adm_t_c_upd_next.html" style="float: right;"  data-title="修改内容">修改</a></td>
+
+
+
+    </tr>
+    <tr>
+     <td>网站架构</td>
+      <td>网站开发</td>
+      <td>吴龙</td>
+      <td><a class="showBtn " style="" data-width="550px" data-height="400px" data-url="adm_t_c_upd_next.html" style="float: right;"  data-title="修改内容">修改</a></td>
+
+
+
+    </tr>
+
+
+  </tbody>
+</table>
+
+<button class="layui-btn" style=" margin-left:535px; float:right; ">确定</button>
+
+ </div>       
+</body>
+
+
+
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+layui.use('layer', function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+  
+ //触发事件
+  $(".showBtn").on('click', function () {
+    var oArea = [];
+    oArea.push($(this).data("width"));
+    oArea.push($(this).data("height"));
+    var oUrl = $(this).data("url");
+    var oTitle = $(this).data("title");
+    layer.open({
+      type: 2, 
+      content:oUrl, //这里content是一个普通的String
+      area: oArea ,//自定义文本域宽高
+      title:oTitle
+    });
+  })
+  
+  
+});
+</script>
+
+
+
+
+</html>

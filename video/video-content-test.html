@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>视频页面 - 答题</title>
+    <link rel="stylesheet" href="../css/iconfonts-arrow/iconfont.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="mask hidden"></div>
+<div class="login-panel js-loginPanel hidden">
+    <div class="login-header">
+        <span class="close js-close">关闭</span>P
+    </div>
+    <div class="login-content">
+        <ul class="login-title js-tabTitle cf">
+            <!-- js -->
+            <li class="active fl">用户登录</li>
+            <li class="fl">找回密码</li>
+        </ul>
+        <!-- login -->
+        <div class="login-form js-forms">
+            <form action="#" id="loginForm">
+                <div class="form-control pseudo-element js-login-type">
+                    <input type="radio" id="example1" name="usertpye" class="pseudo-radio" value="0" checked/>
+                    <label for="example1"></label><span>学生</span>
+                    <input type="radio" id="example2" name="usertpye" class="pseudo-radio" value="1"/>
+                    <label for="example2"></label><span>教师</span>
+                    <input type="radio" id="example3" name="usertpye" class="pseudo-radio" value="2"/>
+                    <label for="example3"></label><span>专家</span>
+                </div>
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号/工号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="password" class="form-input" name="password" placeholder="输入密码">
+                </div>
+                <button type="submit" class="form-button">
+                    立即登录
+                </button>
+            </form>
+        </div>
+        <!-- find password -->
+        <div class="login-form js-forms hidden">
+            <form action="#" id="findPwd">
+                <div class="form-control icon-user ">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号/工号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="realname" placeholder="请输入你的真实姓名">
+                </div>
+                <button type="submit" class="form-button">
+                    提交重置密码邮件
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="header">
+    <div class="header-in cf">
+        <div class="logo fl">
+            <a href="../index.html"><img src="../images/logo3.png" alt=""></a>
+        </div>
+        <ul class="nav fl">
+            <li class="nav-item"><a href="../course/course-list.html">全部课程</a></li>
+        </ul>
+        <div class="user fr">
+            <div class="user-avatar js-userAvatar fr">
+                <img src="../images/small.jpg" alt="">
+
+                <!-- not login -->
+                <ul class="user-menu notlogin hidden">
+                    <li class="user-text">
+                        <a href="#">身份: 游客</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">请登录...</a>
+                    </li>
+                </ul>
+                <!-- already login -->
+                <ul class="user-menu js-userMenu login">
+                    <li class="user-text">
+                        <a href="#">学号: 201502525</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">个人中心</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">我的学习</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">退出登录</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="user-nav fr">
+                <a href="#">测试用户1</a>
+            </div>
+        </div>
+        <div class="search fr cf">
+            <div class="search-type fl">
+                <!-- js -->
+                <span class="selected-type js-select">课程</span>
+                <b class="bottom-arr"></b>
+                <!-- js -->
+                <ul class="search-list js-selectList hidden">
+                    <li>课程</li>
+                    <li>用户</li>
+                    <li>资源</li>
+                </ul>
+            </div>
+            <div class="search-content fl">
+                <form action="">
+                    <input class="search-input" type="text" placeholder="请输入内容">
+                </form>
+            </div>
+            <button type="submit" class="search-btn fr"></button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- code here -->
+    <div class="couse-detail">
+        
+        <div class="exam-container-top">
+                <div class="exam-container-top-backbtn">
+                   <a href="#"><&nbsp;&nbsp;&nbsp;返回课程主页</a>
+                </div>
+                <div class="exam-title-txt">
+                <p>课时名称：Javascript高级程序设计</p> 
+                </div>
+
+                <div class="exam-container-top-in">
+                    <div class="exam-news">
+                        <div class="exam-video-out">
+                            <video class="video" src="demo.mp4" controls></video>
+                        </div>
+                       
+
+                        <!--<div class="exam-news-list">-->
+                            <!--<div class="exam-news-title">-->
+                                <!--<span>最新动态</span>-->
+                            <!--</div>-->
+                            <!--<ul>-->
+                                <!--<li class="exam-news-item">-->
+                                        <!--<span class="num num1">-->
+                                            <!--01-->
+                                        <!--</span>-->
+                                    <!--<a class="text" href="#">-->
+                                        <!--视频1 《JavaScript基础》-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                                <!--<li class="exam-news-item">-->
+                                        <!--<span class="num num2">-->
+                                            <!--02-->
+                                        <!--</span>-->
+                                    <!--<a class="text" href="#">-->
+                                        <!--视频1 《JavaScript基础》-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                                <!--<li class="exam-news-item">-->
+                                        <!--<span class="num num3">-->
+                                            <!--03-->
+                                        <!--</span>-->
+                                    <!--<a class="text" href="#">-->
+                                        <!--视频1 《JavaScript基础》-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                                <!--<li class="exam-news-item">-->
+                                        <!--<span class="num">-->
+                                            <!--04-->
+                                        <!--</span>-->
+                                    <!--<a class="text" href="#">-->
+                                        <!--视频1 《JavaScript基础》-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                                <!--<li class="exam-news-item">-->
+                                        <!--<span class="num">-->
+                                            <!--05-->
+                                        <!--</span>-->
+                                    <!--<a class="text" href="#">-->
+                                        <!--视频1 《JavaScript基础》-->
+                                    <!--</a>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        <div class="couse-detail-content fl">
+            <div class="couse-detail-content_left course-shadow fl">
+                <ul class=" couse fl">
+                            <li class="couse-content-item">
+                                <a href="video-course-content.html">
+                                    视频
+                                </a>
+                            </li>
+                            <li class="couse-content-item">
+                                <a href="video-content-doc.html">
+                                    文档
+                                </a>
+                            </li>
+                            <li class="couse-content-item active">
+                                <a href="video-content-test.html">
+                                    试题
+                                </a>
+                            </li>
+                            <li class="couse-content-item">
+                                <a href="video-content-qanda.html">
+                                    问答
+                                </a>
+                            </li>
+                        </ul>
+            </div>
+            <div class="couse-detail-content_lefter course-shadow fl">
+                <!-- 试题修改 -->
+                <div class="exam-container-bottom-question">
+                    <li>
+                        <div class="exam-question">
+                            1、写“Hello World”的正确javascript语法是？
+                        </div>
+                        <div class="exam-answer">
+                            <input name="1" type="radio">
+                                <p>
+                                    A. document.write("Hello World")
+                                </p>
+                                <input name="1" type="radio">
+                                    <p>
+                                        B. "Hello World"
+                                    </p>
+                                    <br>
+                                        <input name="1" type="radio">
+                                            <p>
+                                                C. response.write("Hello World")
+                                            </p>
+                                            <input name="1" type="radio">
+                                                <p>
+                                                    D. ("Hello World")
+                                                </p>
+                                            </input>
+                                        </input>
+                                    </br>
+                                </input>
+                            </input>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="exam-question">
+                            2、JS特性不包括()
+                        </div>
+                        <div class="exam-answer">
+                            <input name="2" type="radio">
+                                <p>
+                                    A.解释性
+                                </p>
+                                <input name="2" type="radio">
+                                    <p>
+                                        B.用于客户端
+                                    </p>
+                                    <br>
+                                        <input name="2" type="radio">
+                                            <p>
+                                                C.基于对象
+                                            </p>
+                                            <input name="2" type="radio">
+                                                <p>
+                                                    D.面向对象
+                                                </p>
+                                            </input>
+                                        </input>
+                                    </br>
+                                </input>
+                            </input>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="exam-question">
+                            3.下列JS的判断语句中( )是正确的
+                        </div>
+                        <div class="exam-answer">
+                            <input name="3" type="radio">
+                                <p>
+                                    A. if(i==0)
+                                </p>
+                                <input name="3" type="radio">
+                                    <p>
+                                        B. if(i=0)
+                                    </p>
+                                    <br>
+                                        <input name="3" type="radio">
+                                            <p>
+                                                C. if i==0 then
+                                            </p>
+                                            <input name="3" type="radio">
+                                                <p>
+                                                    D.if i=0
+                                                </p>
+                                            </input>
+                                        </input>
+                                    </br>
+                                </input>
+                            </input>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="exam-question">
+                            4、下列JavaScript的循环语句中( )是正确的
+                        </div>
+                        <div class="exam-answer">
+                            <input name="4" type="radio">
+                                <p>
+                                    A.if(i<10;i++)
+                                </p>
+                                <input name="4" type="radio">
+                                    <p>
+                                        B.for(i=0;i<10)
+                                    </p>
+                                    <br>
+                                        <input name="4" type="radio">
+                                            <p>
+                                                C.for i=1 to 10
+                                            </p>
+                                            <input name="4" type="radio">
+                                                <p>
+                                                    D.for(i=0;i<=10;i++)
+                                                </p>
+                                            </input>
+                                        </input>
+                                    </br>
+                                </input>
+                            </input>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="exam-question">
+                            5、下列的哪一个表达式将返回假
+                        </div>
+                        <div class="exam-answer">
+                            <input name="5" type="radio">
+                                <p>
+                                    A.!(3<=1)
+                                </p>
+                                <input name="5" type="radio">
+                                    <p>
+                                        B.(4>=4)&&(5<=2)
+                                    </p>
+                                    <br>
+                                        <input name="5" type="radio">
+                                            <p>
+                                                C.(“a”==”a”)&&(“c”!=”d”)
+                                            </p>
+                                            <input name="5" type="radio">
+                                                <p>
+                                                    D.(2<3)||(3<2)
+                                                </p>
+                                            </input>
+                                        </input>
+                                    </br>
+                                </input>
+                            </input>
+                        </div>
+                    </li>
+                    <!-- 修改 -->
+                    <a href="../video/video-course-content.html"><div class="exam-container-bottom-question-btn">提交</div></a>
+                </div>
+
+
+                <div class="main-top-nav">
+                    <p>问答</p>
+
+                </div>
+
+
+                <div class="main-txxt">
+                    <div class="main-txxt">
+                        <p>
+                            添加问答
+                        </p>
+                        <p><input type="text" value=""/></p>
+                        <button class="main-btn">
+                            提交
+                        </button>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="main-lft">
+                    <div class="main-lbd">
+                        <div class="main-top-nav">
+                            <p>评论</p>
+                        </div>
+
+                        <div class="lft-tke">
+                            <div class="tk-l">
+                                <img src="../images/2.png">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-bu">
+                                    为什么都鄙视Dreamweaver？我觉得那个实时预览的功能挺好用的啊？
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-ft">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+                                <button class="takenot">回复</button>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="lft-te">
+                            <div class="tk-le">
+                                <img src="../images/3.png">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-be">
+                                    Dw就像Word文档，里面的工具很多，不是说这些工具你都不用，它就不在，同样的，文本文档也是文档工具，这两个都可以写文档，无所谓哪个工具，只要能写出“好文章”的就都是好工具
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-fte">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="lft-te">
+                            <div class="tk-le">
+                                <img src="../images/4.png">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-be">
+                                    好看才是王道，所以选择atom,sublime,vsc吧。
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-fte">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="lft-te">
+                            <div class="tk-le">
+                                <img src="../images/5.png">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-be">
+                                    初级，中级都是可以的，我之前接触的同学做网页设计的，都是dw搞的。dw简直是标配。
+                                    我们总是看一个工具好不好用争论不休。简单来说，楼主还没接触其他环境，就如楼下所说dw实时显示的效果不一定和游览器相符合，就如php和linux是标配，用到负载均衡得考unix了。
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-fte">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="main-lbd">
+                        <div class="main-top-nav">
+                            <p>评论</p>
+                        </div>
+
+                        <div class="lft-tke">
+                            <div class="tk-l">
+                                <img src="../images/5.jpg">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-bu">
+                                    我们为什么要选择编程这条道路？
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-ft">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+                                <button class="takenot">回复</button>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="lft-te">
+                            <div class="tk-le">
+                                <img src="../images/6.jpg">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-be">
+                                    为什么？这个怎么能问别人呢？每个人都有自己的目标，热爱，挣钱，未来。。。。。而我喜欢是因为挑战，因为解决问题达成目的的快感，这是一种享受。另外，其实不管别人的原因是什么，那些自己没有经历过的东西说出来对你而言真的太虚了，你能坚持自己的理由就是了。
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-fte">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="lft-te">
+                            <div class="tk-le">
+                                <img src="../images/7.jpg">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-be">
+                                    我这人生来就是程序员的命，能说几句却不爱交际，喜欢挑战困难，接触新事物。
+                                    加之本来就农民成分，小时候就对电脑这种新事物特别上瘾，玩游戏也玩的厉害。
+                                    我也有一个给我一台电脑，就能黑进美国五角大楼的梦想。
+                                    现实不能，但我知道凭着自己的兴趣将这条路坚持下去。
+                                    我能带给我爱的人和爱我的人希望和想要的幸福。
+                                    我在做我喜欢做的事，生活就变得很简单。
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-fte">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="lft-te">
+                            <div class="tk-le">
+                                <img src="../images/8.jpg">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-be">
+                                    喜欢帮隔壁的女孩子修电脑
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-fte">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-lbd">
+                        <div class="main-top-nav">
+                            <p>评论</p>
+                        </div>
+
+                        <div class="lft-tke">
+                            <div class="tk-l">
+                                <img src="../images/9.jpg">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-bu">
+                                    想学c++就必须先学c语言吗？
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-ft">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+                                <button class="takenot">回复</button>
+                            </div>
+                        </div>
+
+                        <div class="lft-te">
+                            <div class="tk-le">
+                                <img src="../images/10.jpg">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-be">
+                                    不是必要条件，c是面向过程，c++面向对象，面向对象是为了更好的编程处理业务，学习c更有助于了解程序的运行机制，如果想了解更底层的可以看看汇编语言，可以知道计算机如何运算。
+                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-fte">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="lft-te">
+                            <div class="tk-le">
+                                <img src="../images/11.jpg">
+                                <p>
+                                    blovetu
+                                </p>
+                                <div class="tk-be">
+                                    并不是的，如果你以后确定了要写C++，建议直接学C++。
+                                    C++改掉了C中很多的陋习。                                </div>
+                                </img>
+                            </div>
+                            <div class="tk-fte">
+                                <div class="tk-text">
+                                    <a href="#">
+                                        已被提问者采纳
+                                    </a>
+                                </div>
+                                <div class="tk-text">
+                                    <a href="#">
+                                        赞同1
+                                    </a>
+                                </div>
+                                <p>
+                                    反对
+                                </p>
+                                <p>
+                                    0个回复
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class = "bg-model" style="position:absolute;top:0%;left:0%;display:none;background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;z-index:9">
+                        <div class = 'con-model' style="position: absolute;left: 18%;top: 10%;border-radius: 8px;width: 65%;height: 80%;background-color: #fff;z-index:99">
+                            <div class="index-left">
+                                <h2 class="new-save-title">回复</h2>
+                                <div id="js-inputques" class="inputques">
+                                    <div class="quesdetail clearfix">
+                                        <span class="ques-label first-label">*</span>
+                                        <div class="question-area">
+                                            <input type="text"  id="ques-title" class="ipt autocomplete" maxlength="255" name="title" placeholder="你的回复"/>
+                                            <p class="errortip" >标题不能少于5个汉字！</p>
+                                            <dl class="send-area-result">
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <textarea class="form-text"></textarea>
+                                    <div class="mbottom">
+                                        <span class="ques-lal">*</span>
+                                        <div id="tag-title" class="new-tags ques-tag defaultbox">
+                                            <p class="new-tag-info">回复内容</p>
+                                            
+                                            <p class="errortip firse"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-fa">
+                                    <button id="js-submit" class="btn btn-red">发布<span> (Ctrl+Enter)</span></button><br/><br/><br/><br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-right fr">
+                    <div class="barside">
+                        <div class="barside-top">
+                            <div class="rad"></div>
+                            <span>第一章</span>
+                                <div class="side-content">
+                                    <div class="side-cont">
+                                        <p>1.1</p>
+                                        <div class="round1"></div>
+                                        <p><a href="#">导论</a></p>
+                                    </div>
+
+                                    <div class="side-cont">
+                                        <p>1.2</p>
+                                        <div class="round1"></div>
+                                        <p><a href="#">福特和他的T型车</a></p>
+                                    </div>
+
+                                    <div class="side-cont">
+                                        <p>1.3</p>
+                                        <div class="round1"></div>
+                                        <p><a href="#">新一代的创业者</a></p>
+                                    </div>
+
+                                    <div class="side-cont">
+                                        <p>1.4</p>
+                                        <div class="round"></div>
+                                        <p><a href="#">创业的核心是创新</a></p>
+                                    </div>
+
+                                    <div class="side-cont">
+                                        <p>1.5</p>
+                                        <div class="round"></div>
+                                        <p><a href="#">本课导学</a></p>
+                                    </div>
+
+                                    <div class="side-cont">
+                                        <p>1.6</p>
+                                        <div class="round"></div>
+                                        <p><a href="#">全球创新创业新版图</a></p>
+                                    </div>
+
+                                    <div class="side-cont">
+                                        <p>1.7</p>
+                                        <div class="round"></div>
+                                        <p><a href="#">中国创新创业新阶段</a></p>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="barside-top">
+                            <div class="rad"></div>
+                            <span>第二章</span>
+                            <div class="side-content">
+                                <div class="side-cont">
+                                    <p>2.1</p>
+                                    <div class="ro  und"></div>
+                                    <p><a href="#">导论</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>2.2</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">福特和他的T型车</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>2.3</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">新一代的创业者</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>2.4</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">创业的核心是创新</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>2.5</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">本课导学</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>2.6</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">全球创新创业新版图</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>2.7</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">中国创新创业新阶段</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="barside-top">
+                            <div class="rad"></div>
+                            <span>第三章</span>
+                            <div class="side-content">
+                                <div class="side-cont">
+                                    <p>3.1</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">导论</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>3.2</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">福特和他的T型车</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>3.3</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">新一代的创业者</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>3.4</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">创业的核心是创新</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>3.5</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">本课导学</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>3.6</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">全球创新创业新版图</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>3.7</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">中国创新创业新阶段</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="barside-top">
+                            <div class="rad"></div>
+                            <span>第四章</span>
+                            <div class="side-content">
+                                <div class="side-cont">
+                                    <p>4.1</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">导论</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>4.2</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">福特和他的T型车</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>4.3</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">新一代的创业者</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>4.4</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">创业的核心是创新</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>4.5</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">本课导学</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>4.6</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">全球创新创业新版图</a></p>
+                                </div>
+
+                                <div class="side-cont">
+                                    <p>4.7</p>
+                                    <div class="round"></div>
+                                    <p><a href="#">中国创新创业新阶段</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-in">
+        <div class="footer-link cf">
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+        </div>
+        <p>Copyright © 2017 domain.com All Rights Reserved</p>
+        <p>京ICP备 1234567890</p>
+    </div>
+</div>
+<div class="backtop"></div>
+<script src="../libs/jquery/jquery.min.js"></script>
+<!-- 全局使用（表单验证及登录框） -->
+<script src="../libs/jquery-validation/jquery.validate.min.js"></script>
+<script src="../libs/jquery-validation/localization/messages_zh.js"></script>
+<script src="../js/main.js"></script>
+<!-- 右侧教师轮播 -->
+<script src="../js/jquery.marquee.js"></script>
+<script src="../js/slide.js"></script>
+
+
+<script>
+//加入购物车点击事件
+$(".takenot").click(function () {
+    $(".bg-model").fadeTo(300,1)
+});
+
+// //模态框OK按钮点击事件
+// $(".bg-model-ok").click(function () {
+//     $(".bg-model").hide();
+//     //显示窗体的滚动条
+//     $("body").css({ "overflow": "visible" });
+// }).hover(function () {
+//     $(this).css({ "backgroundColor": "#8CC8C8" });
+// }, function () {
+//     $(this).css({ "backgroundColor": "#8CD4E6" });
+// });
+
+
+//点击空白隐藏
+$(".bg-model").click(function(){
+    $(".bg-model").hide();
+})
+
+$(".con-model").click(function(e){
+    e.stopPropagation();
+
+})
+</script>
+
+
+</body>
+</html>

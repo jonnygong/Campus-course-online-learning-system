@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>广告设置</title>
+    <!-- load css -->
+     <link rel="stylesheet" href="../css/layui.css"  media="all">
+
+</head>
+<style type="text/css">
+  .layui-upload-icon i{
+    display: none;
+  }
+</style>
+
+<body style="width: 560px; height: 300px;padding:20px; margin-top: 40px; margin: 0 auto;">
+<div style="padding: 8px">
+  <div class="layui-form-item"> 
+    <label class="layui-form-label" style=" color:#282B33; font-weight: bold;">广告设置：</label>
+    <div class="layui-input-inline">
+      <input type="text" name="text" required lay-verify="required" autocomplete="off" class="layui-input" style="width: 260px">
+    </div>
+    <div class="layui-form-mid layui-word-aux" style="margin-left: 80px">图1</div>
+    <div class="adv_btn" style="width:100px; height:40px;float:right">
+ <input type="file" name="file1" lay-type="images" class="layui-upload-file" style="width:100px; height: 30px; line-height:30px;">  
+ </div>
+     
+  </div>
+  <div class="layui-form-item" >
+    <div class="layui-input-inline" style="margin-left: 110px;">
+      <input type="text" name="text" required lay-verify="required" autocomplete="off" class="layui-input" style="width: 260px">
+    </div>
+    <div class="layui-form-mid layui-word-aux" style="margin-left: 80px">图2</div>
+    <div class="adv_btn" style="width:100px; height:40px;float:right">
+ <input type="file" name="file1" lay-type="images" class="layui-upload-file" style="width:100px; height: 30px; line-height:30px;">  
+ </div>
+     
+  </div>
+  <div class="layui-form-item" >
+    <div class="layui-input-inline" style="margin-left: 110px;">
+      <input type="text" name="text" required lay-verify="required" autocomplete="off" class="layui-input" style="width: 260px">
+    </div>
+    <div class="layui-form-mid layui-word-aux" style="margin-left: 80px">图3</div>
+    <div class="adv_btn" style="width:100px; height:40px;float:right">
+ <input type="file" name="file1" lay-type="images" class="layui-upload-file" style="width:100px; height: 30px; line-height:30px;">  
+ </div>
+     
+  </div>
+   <div class="layui-form-item" >
+    <div class="layui-input-inline" style="margin-left: 110px;">
+      <input type="text" name="text" required lay-verify="required" autocomplete="off" class="layui-input" style="width: 260px">
+    </div>
+    <div class="layui-form-mid layui-word-aux" style="margin-left: 80px">图4</div>
+    <div class="adv_btn" style="width:100px; height:40px;float:right">
+ <input type="file" name="file1" lay-type="images" class="layui-upload-file" style="width:100px; height: 30px; line-height:30px;">  
+ </div>
+    
+  </div>
+     <button class="layui-btn" style="float:right; margin-top:20px; margin-right: 10px;">提交</button>                        
+       
+  
+ </div>      
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script src="../libs/jquery/jquery.min.js"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+// 文件上传
+layui.use('upload', function(){
+  layui.upload({
+    url: '' //上传接口
+    ,success: function(res){ //上传成功后的回调
+      console.log(res)
+    }
+  });
+  
+  layui.upload({
+    url: 'inmages'
+    ,elem: '#test' //指定原始元素，默认直接查找class="layui-upload-file"
+    ,method: 'get' //上传接口的http类型
+    ,success: function(res){
+      LAY_demo_upload.src = res.url;
+    }
+  });
+});
+</script>
+
+</html>

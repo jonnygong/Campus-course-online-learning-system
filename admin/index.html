@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layui.css" media="all">
+    <style type="text/css">
+    .login-form {
+        width: 500px;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        padding: 50px 90px 30px 20px;
+            -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="mask hidden"></div>
+    <div class="login-panel js-loginPanel hidden">
+        <div class="login-header">
+            <span class="close js-close">关闭</span>
+        </div>
+    </div>
+    <div class="header">
+        <div class="header-in cf">
+            <div class="logo fl">
+                <a href="#"><img src="images/logo3.png" alt=""></a>
+            </div>
+            <div class="user fr">
+                <div class="user-nav fr">
+                    <a href="#">请先登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!-- code here -->
+        <div class="login-form">
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="backtop"></div>
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="layui/layui.js" charset="utf-8"></script>
+</body>
+
+</html>

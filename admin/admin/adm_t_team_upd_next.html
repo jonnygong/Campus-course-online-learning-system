@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>修改团队信息</title>
+    <!-- load css -->
+     <link rel="stylesheet" href="../css/layui.css"  media="all">
+
+</head>
+<style type="text/css">
+    th,td,table{
+        text-align: center;
+    }
+</style>
+
+<body style="width:300px; height:150px; padding:10px; margin:0 auto;">
+
+<div class="layui-form-item">
+    <div class="layui-inline" style="margin-top:10%;">
+      <label class="layui-form-label" style="color:#282B33; font-weight: bold;font-size:13px;">团队名称：</label>
+      <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input"  style="height:35px; width:160px;">
+      </div>
+    </div>
+    <span style="float:left; height:30px; line-height: 30px;  margin-left:20px;color:#282B33; font-weight: bold;font-size:13px;">团队负责人：</span>      
+    <select name="city" lay-verify="" style=" height: 33px; width:158px;  float: left;margin-left: 10px;">
+  <option value="">请选择一个老师</option>
+  <option value="010">吴特龙</option>
+  <option value="010">吴大龙</option>
+  <option value="021">吴中龙</option>
+  <option value="0571">吴小龙</option>
+  <option value="0571">吴龙龙</option>
+</select>  
+
+  </div>  
+
+
+    
+<button class="layui-btn" style=" margin-top:5px; margin-left:98px">保存</button>
+
+
+
+       
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+
+
+</script>
+
+
+
+</html>

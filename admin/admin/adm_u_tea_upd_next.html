@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <!-- load css -->
+     <link rel="stylesheet" href="../css/layui.css"  media="all">
+
+</head>
+<style type="text/css">
+    th,td,table{
+        text-align: center;
+    }
+</style>
+
+<body style="width:300px; height:200px; padding:10px; margin:0 auto;">
+
+<div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label" style="color:#282B33; font-weight: bold;">教师姓名：</label>
+      <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input"  style="height:35px; width:160px;">
+      </div>
+    </div>
+    
+    <div class="layui-inline" style="margin-top:15px;">
+      <label class="layui-form-label" style="color:#282B33; font-weight: bold;">教工号：</label>
+      <div class="layui-input-inline">
+        <input type="text" name="email" lay-verify="email" autocomplete="off" class="layui-input"  style="height:35px; width:160px;">
+      </div>
+    </div>
+  </div>
+  
+    <div class="layui-inline">
+      <label class="layui-form-label" style="color:#282B33; font-weight: bold;">所属团队：</label>
+      <div class="layui-input-inline">
+        <select name="team" lay-verify="required" lay-search="" style="height:35px; width:160px;">
+          <option value="">选择所属团队</option>
+          <option value="1">电子商务</option>
+          <option value="2">网站开发</option>
+          <option value="3">数字媒体</option>
+          <option value="4">移动互联</option>
+        </select>
+      </div>
+    </div>
+    
+    
+  
+	</br>
+    
+<button class="layui-btn" style=" margin-top: 30px; margin-left: 130px;">保存</button>
+
+
+
+       
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+</script>
+
+
+
+</html>

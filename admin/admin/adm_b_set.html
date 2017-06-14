@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>首页基本信息</title>
+<link rel="stylesheet" href="../css/layui.css"  media="all">
+<style>
+.layui-upload-icon i{
+    display: none;
+  }
+</style>
+</head>
+
+<body style="width: 600px;height: 550px; padding: 20px; margin: 0 auto; margin-top: 10px;"> 
+
+    <div class="layui-form-item">
+    
+    <label class="layui-form-label" style=" width:100px ;  color:#282B33; font-weight: bold;
+">网站名称：</label>
+    <div class="layui-input-inline">
+      <input type="text " name="w_name" required lay-verify="required" autocomplete="off" class="layui-input" style="width: 400px;">
+    </div>
+    </div>
+    <div class="layui-form-item">
+    <label class="layui-form-label" style="width:100px ; color:#282B33; font-weight: bold;
+">网站副标题：</label>
+    <div class="layui-input-inline">
+      <input type="text " name="w_title" required lay-verify="required" autocomplete="off" class="layui-input" style="width: 400px;">
+    </div>
+    </div>
+    <div class="layui-form-item">
+    <label class="layui-form-label" style="width:100px ; color:#282B33; font-weight: bold;
+">网站域名：</label>
+    <div class="layui-input-inline">
+      <input type="text " name="w_title" required lay-verify="required" autocomplete="off" class="layui-input" style="width: 400px;">
+    </div>
+    <div class="layui-form-mid layui-word-aux" style="margin-left: 130px; height:10px">以“http：//”和“https：//”开头</div>
+    </div>
+    
+    <div class="layui-form-item">
+    <label class="layui-form-label" style="width:100px ; color:#282B33; font-weight: bold;
+">网站LOGO：</label>
+    <div class="adv_btn" style="width:100px; height:40px;float:left;">
+ <input type="file" name="file1" lay-type="images" class="layui-upload-file" style="width:100px; height: 30px; line-height:30px;">  
+ </div>
+    <div class="layui-form-mid layui-word-aux" style="margin-left: 130px; height:10px">请上传png.gif.jpg格式的图片文件，高度不要超过60px </div>
+    </div>
+    <div class="layui-form-item">
+    
+    <label class="layui-form-label" style=" width:100px ;  color:#282B33; font-weight: bold;
+">SEO关键字：</label>
+    <div class="layui-input-inline">
+      <input type="text " name="w_name" required lay-verify="required" autocomplete="off" class="layui-input" style="width: 400px;">
+    </div>
+    </div>
+    <div class="layui-form-item">
+    
+    <label class="layui-form-label" style=" width:100px ;  color:#282B33; font-weight: bold;
+">SEO描述信息：</label>
+    <div class="layui-input-inline">
+      <input type="text " name="w_name" required lay-verify="required" autocomplete="off" class="layui-input" style="width: 400px;">
+    </div>
+    </div>
+    <div class="layui-form-item">
+    
+    <label class="layui-form-label" style=" width:100px ;  color:#282B33; font-weight: bold;
+">ICF备案号：</label>
+    <div class="layui-input-inline">
+      <input type="text " name="w_name" required lay-verify="required" autocomplete="off" value="浙IPC备13006852号-1" class="layui-input" style="width: 400px;">
+    </div>
+    </div>
+    <div class="layui-form-item">
+  </div>                           
+       <button class="layui-btn" style="float:right; margin-top:13px;margin-right: 30px">取消</button>
+       <button class="layui-btn" style="float:right; margin-top:13px; margin-right: 50px;">保存</button>
+       
+ </div> 
+ </div>    
+
+
+
+
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('upload', function(){
+  layui.upload({
+    url: '' //上传接口
+    ,success: function(res){ //上传成功后的回调
+      console.log(res)
+    }
+  });
+  
+  layui.upload({
+    url: '/test/upload.json'
+    ,elem: '#test' //指定原始元素，默认直接查找class="layui-upload-file"
+    ,method: 'get' //上传接口的http类型
+    ,ext: 'jpg|png|gif' //只支持这三种格式的上传。
+    ,success: function(res){
+      LAY_demo_upload.src = res.url;
+    }
+  });
+});
+</script>
+</html>

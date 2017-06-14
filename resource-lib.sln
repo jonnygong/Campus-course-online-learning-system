@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "G:\resource-lib\", ".", "{676D7A9C-A48F-443F-912F-B541C382A782}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/resource-lib"
+		Debug.AspNetCompiler.PhysicalPath = "G:\resource-lib\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\resource-lib\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/resource-lib"
+		Release.AspNetCompiler.PhysicalPath = "G:\resource-lib\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\resource-lib\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2211"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{676D7A9C-A48F-443F-912F-B541C382A782}.Debug|.NET.ActiveCfg = Debug|.NET
+		{676D7A9C-A48F-443F-912F-B541C382A782}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

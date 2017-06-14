@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>管理员修改弹出框</title>
+    <!-- load css -->
+     <link rel="stylesheet" href="../css/layui.css"  media="all">
+
+</head>
+<style type="text/css">
+    th,td,table{
+        text-align: center;
+    }    
+    .layui-form-label{padding: 6px;}
+    .layui-inline{height:5px;}
+    .layui-btn{margin-top: 10px;}
+</style>
+
+<body style="width:330px; height:250px; padding:10px; margin:0 auto;">
+<div style="margin-top: 50px; margin-left: 20px;">
+<div class="layui-form-item">
+    <div class="layui-inline" >
+      <label class="layui-form-label" style="color:#282B33; font-weight: bold;">链接名称：</label>
+      <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input" style="height:30px; width:160px;">
+      </div>
+  </div>
+  </div>
+<div class="layui-form-item">
+    <div class="layui-inline" >
+      <label class="layui-form-label" style="color:#282B33; font-weight: bold;">链接地址：</label>
+      <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input"  style="height:30px; width:160px;">
+      </div>
+
+  </div>
+  </div>
+  <div class="layui-form-item">
+    <div class="layui-inline" >
+      <label class="layui-form-label" style="color:#282B33; font-weight: bold;">链接顺序：</label>
+      <div class="layui-input-inline">
+        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input"  style="height:30px; width:160px;">
+      </div>
+      
+  </div>
+  </div>
+    
+<button class="layui-btn" style=" margin-top:30px; margin-left:130px;">保存</button>
+</div>
+
+
+       
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+</script>
+
+
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>课程添加</title>
+<link rel="stylesheet" href="../css/layui.css"  media="all">
+
+<style>
+#select_k1{ 
+       width:150px; 
+	   height:20px;
+	   }
+.course_add_common{ 
+       width:300px; 
+	   height:200px; 
+	   
+	   margin: 0 auto;
+	   margin-top: 20px;
+	   }
+
+.course_add_main{  
+	   height:220px; 
+	   }
+.course_add_m_l{ 
+	   height:280px; 
+	  
+	   float:left; 
+	   }
+	   
+.course_add_m_l_label{
+	  margin-left:20px;
+	  }
+
+
+.course_add_m_r{  
+	 height:260px; 
+	
+	 float:left;
+	 }
+
+
+
+
+
+.name{ 
+      width:80px;
+	  font-size:14px; 
+	  height:30px; 
+	   float:left;
+	   color:#282B33; 
+	   font-weight:bold; 
+	   text-align:right; 
+	   padding-right:20px;
+	   line-height: 36px;
+	   }
+.common{
+        width:300px; 
+		height:40px;
+		float:left;
+		margin-top:20px;
+
+       }
+
+</style>
+
+<body style="width:400px; height:300px; ">
+
+<div class="course_add_common">
+      <div class="course_add_center">
+           <div class="course_add_main">
+                 <div style="width:400px; height: 200px;  ">
+                    <div style="width: 300px; height:200px; float:left; ">
+				      <div class="common">
+                          <div class ="name" style="float:left; " >课程名称:</div>
+			             <input type="text" name="title" required  lay-verify="required" placeholder="  请输入需添加的课程名称" autocomplete="off" style=" height: 30px; width:180px;  line-height: 30px;"><br/>
+					  </div>
+					  <div class="common">
+                        <div class ="name" style="float:left;" >课程专业:</div>
+						<select name="city" lay-verify="" style=" height: 34px; width:185px; line-height: 30px; float:left">
+						  <option value="">请选择一个专业</option>
+						  <option value="010">网站开发</option>
+						  <option value="021">数字媒体</option>
+						  <option value="0571">电子商务</option>
+						  <option value="0571">物联网</option>
+						</select>
+                        <br/>
+				     </div>
+					  
+					 <div class="common">
+                        <div class ="name" style="float:left;" >主讲老师:</div>
+						<select name="city" lay-verify="" style=" height: 34px; width:185px; line-height: 30px; float:left">
+						  <option value="">请选择教师</option>
+						  <option value="010">吴龙</option>
+						  <option value="021">庄建友</option>
+						  <option value="0571">孟燕</option>
+						  
+						</select>
+                        <br/>
+				     </div>
+				    </div>
+				      <div style="height:200px; width:100px; float: left; margin-top: 20px;">
+				        <div style="height:110px; width:100px; background:#666666;  ">
+				        <button class="layui-btn" style=" width:100px; height:35px; background:#CCCCCC; text-align:center; margin-top: 118px;  ">照片上传</button>
+				    	
+				        </div>
+				      </div>
+				  </div>
+                 </div>
+                
+         
+          
+                 <div style="margin: 0 auto; width: 480px; height: 40px;"> 
+
+						<button class="layui-btn" style=" margin-left:100px;">取消</button>
+                        <button class="layui-btn" style="  margin-left:100px;">保存</button>
+                 </div>
+            
+          
+
+</div>
+</div>
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('upload', function(){
+  layui.upload({
+    url: '' //上传接口
+    ,success: function(res){ //上传成功后的回调
+      console.log(res)
+    }
+  });
+  
+  layui.upload({
+    url: '/test/upload.json'
+    ,elem: '#test' //指定原始元素，默认直接查找class="layui-upload-file"
+    ,method: 'get' //上传接口的http类型
+    ,ext: 'jpg|png|gif' //只支持这三种格式的上传。
+    ,success: function(res){
+      LAY_demo_upload.src = res.url;
+    }
+  });
+});
+</script>
+
+</body>
+</html>

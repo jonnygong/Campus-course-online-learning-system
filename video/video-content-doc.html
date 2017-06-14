@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <title>
+        视频页面 - 文档
+    </title>
+    <link href="../css/iconfonts-arrow/iconfont.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="mask hidden">
+</div>
+<div class="login-panel js-loginPanel hidden">
+    <div class="login-header">
+        <span class="close js-close">关闭</span>
+    </div>
+    <div class="login-content">
+        <ul class="login-title js-tabTitle cf">
+            <!-- js -->
+            <li class="active fl">用户登录</li>
+            <li class="fl">找回密码</li>
+        </ul>
+        <!-- login -->
+        <div class="login-form js-forms">
+            <form action="#" id="loginForm">
+                <div class="form-control pseudo-element js-login-type">
+                    <input type="radio" id="example1" name="usertpye" class="pseudo-radio" value="0" checked/>
+                    <label for="example1"></label><span>学生</span>
+                    <input type="radio" id="example2" name="usertpye" class="pseudo-radio" value="1"/>
+                    <label for="example2"></label><span>教师</span>
+                    <input type="radio" id="example3" name="usertpye" class="pseudo-radio" value="2"/>
+                    <label for="example3"></label><span>专家</span>
+                </div>
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号/工号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="password" class="form-input" name="password" placeholder="输入密码">
+                </div>
+                <button type="submit" class="form-button">
+                    立即登录
+                </button>
+            </form>
+        </div>
+        <!-- find password -->
+        <div class="login-form js-forms hidden">
+            <form action="#" id="findPwd">
+                <div class="form-control icon-user ">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号/工号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="realname" placeholder="请输入你的真实姓名">
+                </div>
+                <button type="submit" class="form-button">
+                    提交重置密码邮件
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="header">
+    <div class="header-in cf">
+        <div class="logo fl">
+            <a href="../index.html"><img src="../images/logo3.png" alt=""></a>
+        </div>
+        <ul class="nav fl">
+            <li class="nav-item"><a href="../course/course-list.html">全部课程</a></li>
+        </ul>
+        <div class="user fr">
+            <div class="user-avatar js-userAvatar fr">
+                <img src="../images/small.jpg" alt="">
+
+                <!-- not login -->
+                <ul class="user-menu notlogin hidden">
+                    <li class="user-text">
+                        <a href="#">身份: 游客</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">请登录...</a>
+                    </li>
+                </ul>
+                <!-- already login -->
+                <ul class="user-menu js-userMenu login">
+                    <li class="user-text">
+                        <a href="#">学号: 201502525</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">个人中心</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">我的学习</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">退出登录</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="user-nav fr">
+                <a href="#">测试用户1</a>
+            </div>
+        </div>
+        <div class="search fr cf">
+            <div class="search-type fl">
+                <!-- js -->
+                <span class="selected-type js-select">课程</span>
+                <b class="bottom-arr"></b>
+                <!-- js -->
+                <ul class="search-list js-selectList hidden">
+                    <li>课程</li>
+                    <li>用户</li>
+                    <li>资源</li>
+                </ul>
+            </div>
+            <div class="search-content fl">
+                <form action="">
+                    <input class="search-input" type="text" placeholder="请输入内容">
+                </form>
+            </div>
+            <button type="submit" class="search-btn fr"></button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- code here -->
+    <div class="couse-detail">
+        <div class="exam-container-top">
+            <div class="exam-container-top-backbtn">
+                <a href="#"><&nbsp;&nbsp;&nbsp;返回课程主页</a>
+            </div>
+            <div class="exam-title-txt">
+                <p>课时名称：Javascript高级程序设计</p>
+            </div>
+
+            <div class="exam-container-top-in">
+                <div class="exam-news">
+                    <div class="exam-video-out">
+                        <video class="video" src="demo.mp4" controls></video>
+                    </div>
+
+
+                    <!--<div class="exam-news-list">-->
+                        <!--<div class="exam-news-title">-->
+                            <!--<span>最新动态</span>-->
+                        <!--</div>-->
+                        <!--<ul>-->
+                            <!--<li class="exam-news-item">-->
+                                        <!--<span class="num num1">-->
+                                            <!--01-->
+                                        <!--</span>-->
+                                <!--<a class="text" href="#">-->
+                                    <!--视频1 《JavaScript基础》-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li class="exam-news-item">-->
+                                        <!--<span class="num num2">-->
+                                            <!--02-->
+                                        <!--</span>-->
+                                <!--<a class="text" href="#">-->
+                                    <!--视频1 《JavaScript基础》-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li class="exam-news-item">-->
+                                        <!--<span class="num num3">-->
+                                            <!--03-->
+                                        <!--</span>-->
+                                <!--<a class="text" href="#">-->
+                                    <!--视频1 《JavaScript基础》-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li class="exam-news-item">-->
+                                        <!--<span class="num">-->
+                                            <!--04-->
+                                        <!--</span>-->
+                                <!--<a class="text" href="#">-->
+                                    <!--视频1 《JavaScript基础》-->
+                                <!--</a>-->
+                            <!--</li>-->
+                            <!--<li class="exam-news-item">-->
+                                        <!--<span class="num">-->
+                                            <!--05-->
+                                        <!--</span>-->
+                                <!--<a class="text" href="#">-->
+                                    <!--视频1 《JavaScript基础》-->
+                                <!--</a>-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="couse-detail-content fl">
+            <div class="couse-detail-content_left course-shadow fl">
+                <ul class=" couse fl">
+                    <li class="couse-content-item">
+                        <a href="video-course-content.html">
+                            视频
+                        </a>
+                    </li>
+                    <li class="couse-content-item active">
+                        <a href="video-content-doc.html">
+                            文档
+                        </a>
+                    </li>
+                    <li class="couse-content-item">
+                        <a href="video-content-test.html">
+                            试题
+                        </a>
+                    </li>
+                    <li class="couse-content-item">
+                        <a href="video-content-qanda.html">
+                            问答
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="couse-detail-content_lefter course-shadow fl">
+                <div class="couse-detail-content_lefter_top fl">
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-visio"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>Visio</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-word"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>DOC</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-txt"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>TXT</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-img"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>JPG</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-video"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>Video</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-visio"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>Visio</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-word"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>DOC</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-txt"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>TXT</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-img"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>JPG</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-video"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>Video</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-visio"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>Visio</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-word"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>DOC</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-txt"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>TXT</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-img"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>JPG</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-video"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>Video</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">Laravel实战</div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="page">
+                            <span class="disabled_page">
+                                首页
+                            </span>
+                    <span class="disabled_page">
+                                上一页
+                            </span>
+                    <a class="active text-page-tag" href="javascript:void(0)">
+                        1
+                    </a>
+                    <a class="text-page-tag" href="/course/list?page=2">
+                        2
+                    </a>
+                    <a class="text-page-tag" href="/course/list?page=3">
+                        3
+                    </a>
+                    <a class="text-page-tag" href="/course/list?page=4">
+                        4
+                    </a>
+                    <a class="text-page-tag" href="/course/list?page=5">
+                        5
+                    </a>
+                    <a class="text-page-tag" href="/course/list?page=6">
+                        6
+                    </a>
+                    <a class="text-page-tag" href="/course/list?page=7">
+                        7
+                    </a>
+                    <a href="/course/list?page=2">
+                        下一页
+                    </a>
+                    <a href="/course/list?page=28">
+                        尾页
+                    </a>
+                </div>
+            </div>
+            <!--<div class="course-content-sidebar fr">-->
+                <!--&lt;!&ndash;<div class="couse-detail-content_right course-shadow">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<h3>&ndash;&gt;-->
+                        <!--&lt;!&ndash;课程简介：&ndash;&gt;-->
+                    <!--&lt;!&ndash;</h3>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="couse-detail-content_right_footfont">&ndash;&gt;-->
+                        <!--&lt;!&ndash;需要有一定的网页基础知识如HTML、CSS样式等，并且已经学习完成《PHP入门篇》对PHP已经有了简单的了解，如变量、常量、数据类型等。全面的掌握PHP的理论知识与实践中的应用方法，提高编程能力与掌握网页开发技能。&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="couse-detail-content_righter course-shadow">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div id="course-teacher-slider">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<ul class="">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li class="teacher-slider-item">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a class="teacher-item" href="#" target="_blank">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img class="teacher-slider-avatar"&ndash;&gt;-->
+                                         <!--&lt;!&ndash;src="http://img.mukewang.com/583f11e40001c79506400960-100-100.jpg">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<span class="teacher-slider-name">&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;七月在夏天&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<span class="teacher-slider-job">&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;神秘讲师“七月”&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</img>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li class="teacher-slider-item">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a class="teacher-item" href="#" target="_blank">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img class="teacher-slider-avatar"&ndash;&gt;-->
+                                         <!--&lt;!&ndash;src="http://img.mukewang.com/583f11e40001c79506400960-100-100.jpg">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<span class="teacher-slider-name">&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;七月在夏天&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<span class="teacher-slider-job">&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;神秘讲师“七月”&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</img>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li class="teacher-slider-item">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<a class="teacher-item" href="#" target="_blank">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img class="teacher-slider-avatar"&ndash;&gt;-->
+                                         <!--&lt;!&ndash;src="http://img.mukewang.com/583f11e40001c79506400960-100-100.jpg">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<span class="teacher-slider-name">&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;七月在夏天&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<span class="teacher-slider-job">&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;神秘讲师“七月”&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</img>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="slider-arrow slider-arrow-left" id="prev">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<i class="iconfont icon-fanhui">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</i>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="slider-arrow slider-arrow-right" id="next">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<i class="iconfont icon-gengduo">&ndash;&gt;-->
+                                <!--&lt;!&ndash;</i>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+
+
+            <!--</div>-->
+
+
+            <div class="sidebar-right fr">
+                <div class="barside">
+                    <div class="barside-top">
+                        <div class="rad"></div>
+                        <span>第一章</span>
+                        <div class="side-content">
+                            <div class="side-cont">
+                                <p>1.1</p>
+                                <div class="round1"></div>
+                                <p><a href="#">导论</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>1.2</p>
+                                <div class="round1"></div>
+                                <p><a href="#">福特和他的T型车</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>1.3</p>
+                                <div class="round1"></div>
+                                <p><a href="#">新一代的创业者</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>1.4</p>
+                                <div class="round"></div>
+                                <p><a href="#">创业的核心是创新</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>1.5</p>
+                                <div class="round"></div>
+                                <p><a href="#">本课导学</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>1.6</p>
+                                <div class="round"></div>
+                                <p><a href="#">全球创新创业新版图</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>1.7</p>
+                                <div class="round"></div>
+                                <p><a href="#">中国创新创业新阶段</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barside-top">
+                        <div class="rad"></div>
+                        <span>第二章</span>
+                        <div class="side-content">
+                            <div class="side-cont">
+                                <p>2.1</p>
+                                <div class="round"></div>
+                                <p><a href="#">导论</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>2.2</p>
+                                <div class="round"></div>
+                                <p><a href="#">福特和他的T型车</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>2.3</p>
+                                <div class="round"></div>
+                                <p><a href="#">新一代的创业者</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>2.4</p>
+                                <div class="round"></div>
+                                <p><a href="#">创业的核心是创新</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>2.5</p>
+                                <div class="round"></div>
+                                <p><a href="#">本课导学</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>2.6</p>
+                                <div class="round"></div>
+                                <p><a href="#">全球创新创业新版图</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>2.7</p>
+                                <div class="round"></div>
+                                <p><a href="#">中国创新创业新阶段</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="barside-top">
+                        <div class="rad"></div>
+                        <span>第三章</span>
+                        <div class="side-content">
+                            <div class="side-cont">
+                                <p>3.1</p>
+                                <div class="round"></div>
+                                <p><a href="#">导论</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>3.2</p>
+                                <div class="round"></div>
+                                <p><a href="#">福特和他的T型车</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>3.3</p>
+                                <div class="round"></div>
+                                <p><a href="#">新一代的创业者</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>3.4</p>
+                                <div class="round"></div>
+                                <p><a href="#">创业的核心是创新</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>3.5</p>
+                                <div class="round"></div>
+                                <p><a href="#">本课导学</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>3.6</p>
+                                <div class="round"></div>
+                                <p><a href="#">全球创新创业新版图</a></p>
+                            </div>
+
+                            <div class="side-cont">
+                                <p>3.7</p>
+                                <div class="round"></div>
+                                <p><a href="#">中国创新创业新阶段</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-in">
+        <div class="footer-link cf">
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+        </div>
+        <p>
+            Copyright © 2017 domain.com All Rights Reserved
+        </p>
+        <p>
+            京ICP备 1234567890
+        </p>
+    </div>
+</div>
+<div class="backtop">
+</div>
+<script src="../libs/jquery/jquery.min.js">
+</script>
+<!-- 全局使用（表单验证及登录框） -->
+<script src="../libs/jquery-validation/jquery.validate.min.js">
+</script>
+<script src="../libs/jquery-validation/localization/messages_zh.js">
+</script>
+<script src="../js/main.js">
+</script>
+<!-- 右侧教师轮播 -->
+<script src="../js/jquery.marquee.js">
+</script>
+<script src="../js/slide.js">
+</script>
+</body>
+</html>

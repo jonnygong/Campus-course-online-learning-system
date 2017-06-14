@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-课程</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="mask hidden"></div>
+<div class="login-panel js-loginPanel hidden">
+    <div class="login-header">
+        <span class="close js-close">关闭</span>
+    </div>
+    <div class="login-content">
+        <ul class="login-title js-tabTitle cf">
+            <!-- js -->
+            <li class="active fl">用户登录</li>
+            <li class="fl">找回密码</li>
+        </ul>
+        <!-- login -->
+        <div class="login-form js-forms hidden">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="输入密码">
+                </div>
+                <button type="submit" class="form-button">
+                    立即登录
+                </button>
+            </form>
+        </div>
+        <!-- find password -->
+        <div class="login-form js-forms">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="请输入你的真实姓名">
+                </div>
+                <button type="submit" class="form-button">
+                    提交重置密码邮件
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="header">
+    <div class="header-in cf">
+        <div class="logo fl">
+            <a href="../index.html"><img src="../images/logo3.png" alt=""></a>
+        </div>
+        <ul class="nav fl">
+            <li class="nav-item"><a href="../course/course-list.html">全部课程</a></li>
+        </ul>
+        <div class="user fr">
+            <div class="user-avatar js-userAvatar fr">
+                <img src="../images/small.jpg" alt="">
+
+                <!-- not login -->
+                <ul class="user-menu notlogin hidden">
+                    <li class="user-text">
+                        <a href="#">身份: 游客</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">请登录...</a>
+                    </li>
+                </ul>
+                <!-- already login -->
+                <ul class="user-menu js-userMenu login">
+                    <li class="user-text">
+                        <a href="#">学号: 201502525</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="stu-index.html">个人中心</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="stu-lesson.html">我的学习</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="../index.html">退出登录</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="user-nav fr">
+                <a href="#">学生</a>
+            </div>
+        </div>
+        <div class="search fr cf">
+            <div class="search-type fl">
+                <!-- js -->
+                <span class="selected-type js-select">课程</span>
+                <b class="bottom-arr"></b>
+                <!-- js -->
+                <ul class="search-list js-selectList hidden">
+                    <li>课程</li>
+                    <li>用户</li>
+                    <li>资源</li>
+                </ul>
+            </div>
+            <div class="search-content fl">
+                <form action="">
+                    <input class="search-input" type="text" placeholder="请输入内容">
+                </form>
+            </div>
+            <button type="submit" class="search-btn fr"></button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- code here -->
+
+    <div class="bg-other">
+        <div class="bg-other-in">
+            <div class="bg-other-l">
+                <div class="bg-other-l-in">
+                    <img src="../images/tx.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="bg-other-r">
+                <h3 class="user-name clearfix">
+                    <span>全栈梦想师JonnyGong</span>
+                </h3>
+
+                <p class="about-info">全栈工程师</p>
+                <p class="user-desc">这位同学很懒，木有签名的说～</p>
+            </div>
+        </div>
+    </div>
+    <div class="tea-main">
+        <div class="tea-main-in">
+            <div class="tea-main-l">
+
+                <ul>
+                    <li><a href="stu-index.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>个人主页</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                    <li><a href="stu-lesson.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>我的课程</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="stu-question.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>我的提问</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="stu-note.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>我的笔记</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+
+                    <li><a href="stu-information.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>个人设置</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="tea-main-r">
+                <div class="tea-main-r-in">
+                    <div class="tea-main-r-nav">
+                        相关课程
+                       <!--  <button>添加课程</button> -->
+                    </div>
+
+
+                    <div class="tea-main-r-content fl">
+
+
+                        <div class="tea-main-body pr cf">
+                            <a href="stu-course-content.html" class="bg-lesson" target=_blank>
+                                <img class="fl" src="../images/course-content.jpg"
+                                     width="240" height="135"/>
+
+                                <div class="content fl w636">
+
+                                    <div class="subtitle_les">
+                                        <a href="stu-course-content.html" target="_blank">javascript高级程序设计</a>
+                                    </div>
+                                    <!-- 修改 -->
+                                        <span class="pb-scope">
+                                             <span class="pb-bar"></span>
+                                        </span>
+
+
+                                    <div class="describe">
+                                        <span>教师：汪树岩</span>
+                                        <span class="ml20"><strong> 1</strong>学分<strong>40</strong>学时</span>
+                                        <span class="ml20"> 更新完毕 </span>
+                                    </div>
+                                    <div class="detail">
+                                        本课程主要讲解了javascript 是如何站在前端巨人肩膀上，进行新项目的搭建，并通过简...
+                                    </div>
+
+                                </div>
+                            </a>
+                            <button class="man">
+                            <a href="stu-course-content.html">开始学习</button>
+                            <!-- <button class="add">添加</button> -->
+                        </div>
+
+
+
+
+                        <div class="tea-main-body pr cf">
+                            <a href="stu-course-content.html" class="bg-lesson" target=_blank>
+                                <img class="fl" src="../images/course-content2.jpg"
+                                     width="240" height="135"/>
+
+                                <div class="content fl w636">
+
+                                    <div class="subtitle_les">
+                                        <a href="stu-course-content.html" target="_blank">vue.js入门基础</a>
+                                    </div>
+                                    
+
+                                    <!-- 修改 -->
+                                    <span class="pb-scope">
+                                          <span class="pb-bar"></span>
+                                    </span>
+
+
+                                    <div class="describe">
+                                        <span>教师：吴龙</span>
+                                        <span class="ml20"><strong> 1</strong>学分<strong>50</strong>学时</span>
+                                        <span class="ml20"> 更新完毕 </span>
+                                    </div>
+                                    <div class="detail">
+
+                                        本课程主要讲解了vuejs 是如何站在前端巨人肩膀上，进行新项目的搭建，并通过简...
+                                    </div>
+                                </div>
+                            </a>
+                            <button class="man">
+                            <a href="stu-course-content.html">开始学习</button>
+                            <!-- <button class="add">开始学习</button> -->
+                        </div>
+                        <div class="tea-main-body pr cf">
+                            <a href="stu-course-content.html" class="bg-lesson" target=_blank>
+                                <img class="fl" src="../images/course-content3.jpg"
+                                     width="240" height="135"/>
+
+                                <div class="content fl w636">
+
+                                    <div class="subtitle_les">
+                                        <a href="stu-course-content.html" target="_blank">asp.net入门基础</a>
+                                    </div>
+                                    
+
+
+                                    <!-- 修改 -->
+                                     <span class="pb-scope">
+                                          <span class="pb-bar"></span>
+                                    </span>
+
+                                    <div class="describe">
+                                        <span>教师：李华</span>
+                                        <span class="ml20"><strong> 1</strong>学分<strong>60</strong>学时</span>
+                                        <span class="ml20"> 更新完毕 </span>
+                                    </div>
+                                    <div class="detail">
+
+                                        本课程主要讲解了asp.net 是如何站在前端巨人肩膀上，进行新项目的搭建，并通过简...
+                                    </div>
+                                </div>
+                            </a>
+                            <button class="man"><a href="stu-course-content.html">开始学习</a></button>
+                            <!-- <button class="add">添加</button> -->
+                        </div>
+
+                    </div>
+
+
+                    <div class="page">
+
+                        <span class="disabled_page">首页</span>
+                        <span class="disabled_page">上一页</span>
+                        <a href="javascript:void(0)" class="active text-page-tag">1</a>
+                        <a class="text-page-tag" href="/course/list?page=2">2</a>
+                        <a class="text-page-tag" href="/course/list?page=3">3</a>
+                        <a class="text-page-tag" href="/course/list?page=4">4</a>
+                        <a class="text-page-tag" href="/course/list?page=5">5</a>
+                        <a class="text-page-tag" href="/course/list?page=6">6</a>
+                        <a class="text-page-tag" href="/course/list?page=7">7</a>
+                        <a href="/course/list?page=2">下一页</a>
+                        <a href="/course/list?page=28">尾页</a>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+</div>
+<div class="footer">
+    <div class="footer-in">
+        <div class="footer-link cf">
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+        </div>
+        <p>Copyright © 2017 domain.com All Rights Reserved</p>
+        <p>京ICP备 1234567890</p>
+    </div>
+</div>
+<div class="backtop"></div>
+
+
+<!-- <div class="bg-model"
+     style="position:absolute;top:0%;left:0%;display:none;background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;z-index:9">
+    　　
+    <div class='con-model'
+         style="position: absolute;left: 18%;top: 15%;border-radius: 8px;width: 65%;height: 60%;z-index:99">
+            <table cellspacing="0">
+    <tr><th>教师工号</th><th>教师姓名</th><th>所在课程</th><th>操作</th></tr>
+    <tr><td>434324</td><td>吴一龙</td><td>C#</td><td><button>添加</button></td></tr>
+    <tr><td>7657657657657</td><td>吴二龙</td><td>C#</td><td><button>添加</button></td></tr>
+    <tr><td>78768768</td><td>吴三龙</td><td>C#</td><td><button>添加</button></td></tr>
+    <tr><td>46357868</td><td>吴四龙</td><td>C#</td><td><button>添加</button></td></tr>
+    <tr><td>794674564</td><td>吴五龙</td><td>C#</td><td><button>添加</button></td></tr>
+    </table>
+        　　
+    </div>
+</div> -->
+
+
+<!-- <div class="bg-model2"
+     style="position:absolute;top:0%;left:0%;display:none;background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;z-index:9">
+    　　
+    <div class='con-model2'
+         style="position: absolute;left: 18%;top: 15%;border-radius: 8px;width: 65%;height: 60%;z-index:99">
+            <table cellspacing="0">
+    <tr><th>教师</th><th>教师姓名</th><th>所在课程</th><th>操作</th></tr>
+    <tr><td>434324</td><td>吴一龙</td><td>C#</td><td><button>删除</button></td></tr>
+    <tr><td>7657657657657</td><td>吴二龙</td><td>C#</td><td><button>删除</button></td></tr>
+    <tr><td>78768768</td><td>吴三龙</td><td>C#</td><td><button>删除</button></td></tr>
+    <tr><td>46357868</td><td>吴四龙</td><td>C#</td><td><button>删除</button></td></tr>
+    <tr><td>794674564</td><td>吴五龙</td><td>C#</td><td><button>删除</button></td></tr>
+    </table>
+        　　
+    </div>
+</div> -->
+
+<script src="../libs/jquery/jquery.min.js"></script>
+<!-- 全局使用（表单验证及登录框） -->
+<script src="../libs/jquery-validation/jquery.validate.min.js"></script>
+<script src="../libs/jquery-validation/localization/messages_zh.js"></script>
+<script src="../js/main.js"></script>
+<script>
+
+        //加入购物车点击事件
+        $(".man").click(function () {
+            $(".bg-model2").fadeTo(300,1)
+            //隐藏窗体的滚动条
+            $("body").css({ "overflow": "hidden" });
+        });
+
+        $(".add").click(function () {
+            $(".bg-model").fadeTo(300,1)
+            //隐藏窗体的滚动条
+            $("body").css({ "overflow": "hidden" });
+        });
+
+        // //模态框OK按钮点击事件
+        // $(".bg-model-ok").click(function () {
+        //     $(".bg-model").hide();
+        //     //显示窗体的滚动条
+        //     $("body").css({ "overflow": "visible" });
+        // }).hover(function () {
+        //     $(this).css({ "backgroundColor": "#8CC8C8" });
+        // }, function () {
+        //     $(this).css({ "backgroundColor": "#8CD4E6" });
+        // });
+
+
+        //点击空白隐藏
+        $(".bg-model").click(function(){
+            $(this).hide();
+        })
+
+        $(".con-model").click(function(e){
+            e.stopPropagation();
+
+        })
+
+        $(".bg-model2").click(function(){
+            $(this).hide();
+        })
+        $(".con-model2").click(function(e){
+            e.stopPropagation();
+
+        })
+//table
+
+ $(function() {
+        /* For zebra striping */
+        $("table tr:nth-child(odd)").addClass("odd-row");
+        /* For cell text alignment */
+        $("table td:first-child, table th:first-child").addClass("first");
+        /* For removing the last border */
+        $("table td:last-child, table th:last-child").addClass("last");
+});
+
+</script>
+</body>
+</html>

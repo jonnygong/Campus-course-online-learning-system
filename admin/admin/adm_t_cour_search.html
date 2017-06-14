@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>课程查询</title>
+    <!-- load css -->
+     <link rel="stylesheet" href="../css/layui.css"  media="all">
+
+</head>
+<style type="text/css">
+    th,td,table{
+        text-align: center;
+    }
+    .layui-table td, .layui-table th{padding: 0px;width: 50px;height: 25px;}
+</style>
+
+<body style="width: 600px; height: 500px;padding:20px; margin: 0 auto;">
+
+<!-- 下拉列表 代码-->
+<input type="text" name="title" required  lay-verify="required" placeholder="  请搜索关键字" autocomplete="off" style=" height: 30px; width:180px;  line-height: 30px; margin-left: 10px;" >
+<!-- 输入框代码 -->
+       
+     
+<!-- 按钮代码 -->
+<button class="layui-btn" style=" float:right ; margin-right:10px;">搜索</button>
+    <!-- 表格代码 -->
+    <div style="padding: 10px;clear: both;">
+        <table class="layui-table"  >
+  <colgroup>
+    <col width="100">
+    <col width="100">
+    <col width="80">
+    <col>
+  </colgroup>
+  <thead >
+    <tr>
+
+      <th style="text-align: center;">课程名称</th>
+      <th style="text-align: center;">课程专业</th>
+      <th style="text-align: center;">主讲老师</th>
+
+      
+    </tr> 
+  </thead>
+  <tbody>
+    <tr>
+      <td>网站架构</td>
+      <td>网站开发</td>
+      <td>吴龙</td>
+    </tr>
+    <tr>
+     <td>网站架构</td>
+      <td>网站开发</td>
+      <td>吴龙</td>
+    </tr>
+	<tr>
+     <td>网站架构</td>
+      <td>网站开发</td>
+      <td>吴龙</td>
+    </tr>
+	<tr>
+     <td>网站架构</td>
+      <td>网站开发</td>
+      <td>吴龙</td>
+    </tr>
+	<tr>
+     <td>网站架构</td>
+      <td>网站开发</td>
+      <td>吴龙</td>
+    </tr>
+
+
+  </tbody>
+</table>
+ </div>       
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+</script>
+
+
+
+</html>

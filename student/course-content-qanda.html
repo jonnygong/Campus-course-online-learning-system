@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>课程学习-提问</title>
+    <link rel="stylesheet" href="../css/iconfonts-arrow/iconfont.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="mask hidden"></div>
+<div class="login-panel js-loginPanel hidden">
+    <div class="login-header">
+        <span class="close js-close">关闭</span>
+    </div>
+    <div class="login-content">
+        <ul class="login-title js-tabTitle cf">
+            <!-- js -->
+            <li class="active fl">用户登录</li>
+            <li class="fl">找回密码</li>
+        </ul>
+        <!-- login -->
+        <div class="login-form js-forms hidden">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="输入密码">
+                </div>
+                <button type="submit" class="form-button">
+                    立即登录
+                </button>
+            </form>
+        </div>
+        <!-- find password -->
+        <div class="login-form js-forms">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="请输入你的真实姓名">
+                </div>
+                <button type="submit" class="form-button">
+                    提交重置密码邮件
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="header">
+    <div class="header-in cf">
+        <div class="logo fl">
+            <a href="../index.html"><img src="../images/logo3.png" alt=""></a>
+        </div>
+        <ul class="nav fl">
+            <li class="nav-item"><a href="../course/course-list.html">全部课程</a></li>
+        </ul>
+        <div class="user fr">
+            <div class="user-avatar js-userAvatar fr">
+                <img src="../images/small.jpg" alt="">
+
+                <!-- not login -->
+                <ul class="user-menu notlogin hidden">
+                    <li class="user-text">
+                        <a href="#">身份: 游客</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">请登录...</a>
+                    </li>
+                </ul>
+                <!-- already login -->
+                <ul class="user-menu js-userMenu login">
+                    <li class="user-text">
+                        <a href="#">学号: 201502525</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="stu-index.html">个人中心</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="stu-lesson.html">我的学习</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="../index.html">退出登录</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="user-nav fr">
+                <a href="#">测试用户1</a>
+            </div>
+        </div>
+        <div class="search fr cf">
+            <div class="search-type fl">
+                <!-- js -->
+                <span class="selected-type js-select">课程</span>
+                <b class="bottom-arr"></b>
+                <!-- js -->
+                <ul class="search-list js-selectList hidden">
+                    <li>课程</li>
+                    <li>用户</li>
+                    <li>资源</li>
+                </ul>
+            </div>
+            <div class="search-content fl">
+                <form action="">
+                    <input class="search-input" type="text" placeholder="请输入内容">
+                </form>
+            </div>
+            <button type="submit" class="search-btn fr"></button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- code here -->
+    <div class="couse-detail">
+        <div class="couse-detail-classification ">
+            <ul class=" couse fl">
+                <li class="couse-item"><a href="#"> 首页 ></a></li>
+                <li class="couse-item"><a href="#"> 全部课程 ></a></li>
+                <li class="couse-item"><a href="#"> 课程开发 ></a></li>
+                <li class="couse-item"><a href="#"> 编程开发 ></a></li>
+                <li class="couse-item"><a href="#"> 课程详情</a></li>
+
+            </ul>
+
+        </div>
+        <div class="couse-detail-introduction course-shadow fl">
+            <div class="couse-detail-introduction_left fl">
+                <img src="../images/couse-detail-introduction.jpg" width="450" height="251">
+            </div>
+            <div class="couse-detail-introduction_right fl ">
+                <div class="couse-detail-introduction_right_top">
+                    <h1>Laravel实战：任务管理系统</h1>
+
+                    <div class="couse-detail-introduction_right_topfont">
+                        <span class="course-detail-info">课程负责人：<span>吴龙</span></span>
+                        <span class="course-detail-info">学分：<span>2 学分</span></span>
+                        <span class="course-detail-info">学时：<span>8 学时</span></span>
+                    </div>
+
+
+                </div>
+                <div class="couse-detail-introduction_right_foot ">
+                    <h2>课程简介</h2>
+                    <p class="couse-detail-introduction_right_footfont" ondblclick="edit(this)">
+                        目前国内最in最规范的laravel中文教程，全五星好评，laravel入门及进阶必学；
+                        以实战的形式，不照搬文档，实用而可迁移，触类旁通后可应对大部分日常开发；
+                        率先使用homestead这一最优雅最先进的配置环境，抛弃傻瓜而缺乏长远用处的wamp；
+                    </p>
+                     <a href="../video/video-content-qanda.html"><input type="submit" name="register" value="开始学习" class="btn_btn-submit disabled btn_enabled"
+                           tabindex="6"></a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="couse-detail-content fl">
+            <div class="couse-detail-content_left course-shadow fl">
+                <ul class=" couse fl">
+                    <li class="couse-content-item"><a href="stu-course-content.html"> 视频</a></li>
+                    <li class="couse-content-item"><a href="course-content-doc.html"> 文档 </a></li>
+                    <li class="couse-content-item"><a href="course-content-test.html"> 试题 </a></li>
+                    <li class="couse-content-item active"><a href="course-content-qanda.html"> 问答</a></li>
+
+                </ul>
+            </div>
+            <div class="couse-detail-content_lefter course-shadow fl">
+
+                <div class="couse-detail-content_lefter_top fl">
+
+
+
+                    <div class="ques-header">
+                        <a href="/qa/69/t/1?page=1" class="bar-item active">全部</a>
+                        <span class="js-pub-btn">我要提问</span>
+                    </div>
+
+
+                    <div class="ques-list">
+                        <div class="ques-answer">
+                            <div class="tag-img">
+                                <a href="/wenda/26" target="_blank">
+                                    <img src="http://img.mukewang.com/563b0af800018db300900090.jpg" alt="前端工具"
+                                         title="前端工具"/>
+                                </a>
+                            </div><!--.tag-img end-->
+                            <div class="from-tag">
+                                来自
+                                <a href="/wenda/26" target="_blank">啦啦啦</a>
+                            </div><!--.from-tag end-->
+                            <div class="ques-con">
+                                <a href="../question_answer.html" class="ques-con-content" title="教师添加视频、教案界面是什么样的？"
+                                   target="_blank">慕课网教师端界面是怎么样的？</a>
+                                <div class="share-box clearfix">
+                                    <div class="show-btn"><i class="icon-down2"></i></div>
+                                    <div class="share-box-con">
+                                        <div class="bdsharebuttonbox" data-tag="share_343609" data-quesid="343609">
+                                            <a class="bds_weixin icon-share-weichat" data-cmd="weixin"></a>
+                                            <a class="bds_tsina icon-share-weibo" data-cmd="tsina"></a>
+                                            <a class="bds_qzone icon-share-qq" data-cmd="qzone" href="#"></a>
+                                        </div>
+                                        <div class="follow" title='关注' data-ques-id="343609"><i class="icon-heart"></i>
+                                        </div>
+                                    </div><!-- .share-box-con end -->
+                                </div><!-- .share-box end -->
+                            </div><!-- .ques-con end-->
+                            <div class="about-info">
+                                <span class="time">5天前</span>
+                                <a href="/wenda/detail/343609" target="_blank" class="reply-num">0个回答</a>
+                            </div><!-- .about-info end -->
+                        </div><!-- .ques-answer end -->
+
+                    </div><!-- .ques-list end -->
+
+
+                    <div class="ques-list">
+                        <div class="ques-answer">
+                            <div class="tag-img">
+                                <a href="/wenda/26" target="_blank">
+                                    <img src="http://img.mukewang.com/563b0af800018db300900090.jpg" alt="前端工具"
+                                         title="前端工具"/>
+                                </a>
+                            </div><!--.tag-img end-->
+                            <div class="from-tag">
+                                来自
+                                <a href="/wenda/26" target="_blank">啦啦啦</a>
+                            </div><!--.from-tag end-->
+                            <div class="ques-con">
+                                <a href="../question_answer.html" class="ques-con-content" title="教师添加视频、教案界面是什么样的？"
+                                   target="_blank">慕课网教师端界面是怎么样的？</a>
+                                <div class="share-box clearfix">
+                                    <div class="show-btn"><i class="icon-down2"></i></div>
+                                    <div class="share-box-con">
+                                        <div class="bdsharebuttonbox" data-tag="share_343609" data-quesid="343609">
+                                            <a class="bds_weixin icon-share-weichat" data-cmd="weixin"></a>
+                                            <a class="bds_tsina icon-share-weibo" data-cmd="tsina"></a>
+                                            <a class="bds_qzone icon-share-qq" data-cmd="qzone" href="#"></a>
+                                        </div>
+                                        <div class="follow" title='关注' data-ques-id="343609"><i class="icon-heart"></i>
+                                        </div>
+                                    </div><!-- .share-box-con end -->
+                                </div><!-- .share-box end -->
+                            </div><!-- .ques-con end-->
+                            <div class="about-info">
+                                <span class="time">5天前</span>
+                                <a href="/wenda/detail/343609" target="_blank" class="reply-num">0个回答</a>
+                            </div><!-- .about-info end -->
+                        </div><!-- .ques-answer end -->
+
+                    </div><!-- .ques-list end -->
+
+
+                </div>
+                <div class="page">
+
+                    <span class="disabled_page">首页</span>
+                    <span class="disabled_page">上一页</span>
+                    <a href="javascript:void(0)" class="active text-page-tag">1</a>
+                    <a class="text-page-tag" href="/course/list?page=2">2</a>
+                    <a class="text-page-tag" href="/course/list?page=3">3</a>
+                    <a class="text-page-tag" href="/course/list?page=4">4</a>
+                    <a class="text-page-tag" href="/course/list?page=5">5</a>
+                    <a class="text-page-tag" href="/course/list?page=6">6</a>
+                    <a class="text-page-tag" href="/course/list?page=7">7</a>
+                    <a href="/course/list?page=2">下一页</a>
+                    <a href="/course/list?page=28">尾页</a>
+
+
+                </div>
+
+            </div>
+            <div class="course-content-sidebar fr">
+                <div class="couse-detail-content_right course-shadow">
+                    <h3>课程简介：</h3>
+                    <div class="couse-detail-content_right_footfont">
+                        &nbsp;&nbsp;需要有一定的网页基础知识如HTML、CSS样式等，并且已经学习完成《PHP入门篇》对PHP已经有了简单的了解，如变量、常量、数据类型等。全面的掌握PHP的理论知识与实践中的应用方法，提高编程能力与掌握网页开发技能。
+                    </div>
+
+                </div>
+                <div class="couse-detail-content_righter course-shadow">
+                    <div id="course-teacher-slider">
+                        <ul class="">
+                            <li class="teacher-slider-item">
+                                <a target="_blank" href="#" class="teacher-item">
+                                    <img class="teacher-slider-avatar" src="http://img.mukewang.com/583f11e40001c79506400960-100-100.jpg">
+                                    <span class="teacher-slider-name">七月在夏天</span>
+                                    <span class="teacher-slider-job">神秘讲师“七月”</span>
+                                </a>
+                            </li>
+                            <li class="teacher-slider-item">
+                                <a target="_blank" href="#" class="teacher-item">
+                                    <img class="teacher-slider-avatar" src="http://img.mukewang.com/583f11e40001c79506400960-100-100.jpg">
+                                    <span class="teacher-slider-name">七月在夏天</span>
+                                    <span class="teacher-slider-job">神秘讲师“七月”</span>
+                                </a>
+                            </li>
+                            <li class="teacher-slider-item">
+                                <a target="_blank" href="#" class="teacher-item">
+                                    <img class="teacher-slider-avatar" src="http://img.mukewang.com/583f11e40001c79506400960-100-100.jpg">
+                                    <span class="teacher-slider-name">七月在夏天</span>
+                                    <span class="teacher-slider-job">神秘讲师“七月”</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="slider-arrow slider-arrow-left" id="prev"><i class="iconfont icon-fanhui"></i></span>
+                    <span class="slider-arrow slider-arrow-right" id="next"><i class="iconfont icon-gengduo"></i></span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-in">
+        <div class="footer-link cf">
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+        </div>
+        <p>Copyright © 2017 domain.com All Rights Reserved</p>
+        <p>京ICP备 1234567890</p>
+    </div>
+</div>
+<div class="backtop"></div>
+<div class = "bg-model" style="position:absolute;top:0%;left:0%;display:none;background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;z-index:9">
+    　　<div class = 'con-model' style="position: absolute;left: 18%;top: 10%;border-radius: 8px;width: 65%;height: 80%;background-color: #fff;z-index:99">
+    　　
+
+
+
+
+    <div class="index-left" style="margin:0 auto;">
+        <h2 class="new-save-title">提问</h2>
+        <div id="js-inputques" class="inputques">
+            <div class="quesdetail clearfix">
+                <span class="ques-label first-label">*</span>
+                <div class="question-area">
+                    <input type="text"  id="ques-title" class="ipt autocomplete" maxlength="255" name="title" placeholder="请一句话说明你的问题，以问号结尾"/>
+                    <p class="errortip" >标题不能少于5个汉字！</p>
+                    <dl class="send-area-result">
+                    </dl>
+                </div>
+            </div>
+            <textarea class="form-text"></textarea>
+            <div class="mbottom">
+                <span class="ques-lal">*</span>
+                <div id="tag-title" class="new-tags ques-tag defaultbox">
+                    <p class="new-tag-info">选择问题分类，最多可选3个</p>
+                    <!-- <p class="tag-tip">您最多可以从以下选择3个标签哟！</p> -->
+                    <div id="js-tags" class="taglist clearfix">
+                        <a href="javascript:;" class="save-list-tag" data-id="12" name="Android">Android</a>
+                        <a href="javascript:;" class="save-list-tag" data-id="22" name="AngularJS">AngularJS</a>
+                        <a href="javascript:;" class="save-list-tag" data-id="24" name="Bootstrap">Bootstrap</a>
+                        <a href="javascript:;" class="save-list-tag" data-id="28" name="C">C</a>
+                        <a href="javascript:;" class="save-list-tag" data-id="38" name="C#">C#</a>
+                        <a href="javascript:;" class="save-list-tag" data-id="30" name="C++">C++</a>
+                        <a href="javascript:;" class="save-list-tag" data-id="34" name="Cocos2d-x">Cocos2d-x</a>
+                        <a href="javascript:;" class="save-list-tag" data-id="25" name="CSS3">CSS3</a>
+
+                    </div>
+                    <p class="errortip firse"></p>
+                </div>
+            </div>
+        </div>
+        <div class="form-fa">
+            <button id="js-submit" class="btn btn-red">发布<span> (Ctrl+Enter)</span></button><br/><br/><br/><br/>
+        </div>
+    </div>
+</div>
+</div>
+<script src="../libs/jquery/jquery.min.js"></script>
+<!-- 全局使用（表单验证及登录框） -->
+<script src="../libs/jquery-validation/jquery.validate.min.js"></script>
+<script src="../libs/jquery-validation/localization/messages_zh.js"></script>
+<script src="../js/main.js"></script>
+<!-- 右侧教师轮播 -->
+<script src="../js/jquery.marquee.js"></script>
+<script src="../js/slide.js"></script>
+<script>
+    //加入购物车点击事件
+    $(".js-pub-btn").click(function () {
+        $(".bg-model").fadeTo(300,1)
+        //隐藏窗体的滚动条
+//        $("body").css({ "overflow": "hidden" });
+    });
+
+    //模态框OK按钮点击事件
+    $(".bg-model-ok").click(function () {
+        $(".bg-model").hide();
+        //显示窗体的滚动条
+//        $("body").css({ "overflow": "visible" });
+    }).hover(function () {
+        $(this).css({ "backgroundColor": "#8CC8C8" });
+    }, function () {
+        $(this).css({ "backgroundColor": "#8CD4E6" });
+    });
+
+
+    //点击空白隐藏
+    $(".bg-model").click(function(){
+        $(".bg-model").hide();
+    })
+
+    $(".con-model").click(function(e){
+        e.stopPropagation();
+
+    })
+</script>
+</body>
+</html>

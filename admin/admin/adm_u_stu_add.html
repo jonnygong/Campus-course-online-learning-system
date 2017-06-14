@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>信息导入</title>
+    <!-- load css -->
+     <link rel="stylesheet" href="../css/layui.css"  media="all">
+
+</head>
+<style type="text/css">
+    th,td,table{
+        text-align: center;
+    }
+    .layui-laypage .layui-laypage-curr .layui-laypage-em {top:-7px;}
+    .layui-laypage a, .layui-laypage {height: 40px; line-height: 40px;}
+      .layui-laypage .layui-laypage-curr .layui-laypage-em {height: 40px; line-height: 40px;}
+
+    display: none;
+  }
+      .layui-upload-icon span{
+    display: none;
+  }
+  .layui-table td, .layui-table th{
+    height: 25px; padding: 0px
+  }
+  #stu_info_fy{margin-left: 30%;}
+  .layui-upload-icon i{
+    display: none;
+  }
+
+</style>
+
+<body style="width: 740px; height:500px;padding:20px; margin: 0 auto;">
+<div style="width: 700px; margin: 0 auto;">
+<!-- 下拉列表 代码-->
+<select name="b_class" lay-verify="" style=" height: 34px; width:150px;  float: left;margin-left: 10px;">
+  <option value="">请选择一个班级</option>
+  <option value="010">计应1503</option>
+  <option value="021">计应1504</option>
+  <option value="0571">计应1501</option>
+  <option value="0571">计应1502</option>
+</select>  
+<!-- 输入框代码 -->
+       
+      
+<!-- 按钮代码 -->
+
+<!-- <button class="layui-btn" style=" float:right ; margin-right: 10px; ">导入</button>--> 
+<p style="width: 88px; height: 38px;float:right ; margin-right: 10px;">
+<input type="file" name="file1" lay-type="file" class="layui-upload-file" style=" width:88px;height: 30px; line-height: 30px; float:right ; margin-right: 10px;">
+</p>
+<button class="layui-btn" style=" float:right ; margin-right: 10px; ">下载</button>
+   <!-- 表格代码 -->
+    <div style="padding: 10px;clear: both; margin: 0 auto;">
+        <table class="layui-table" >
+  <colgroup>
+    <col width="100">
+    <col width="100">
+    <col width="100">
+    <col width="90">
+    <col>
+  </colgroup>
+  <thead >
+    <tr>
+
+      <th style="text-align: center;">专业</th>
+      <th style="text-align: center;">班级</th>
+      <th style="text-align: center;">学号</th>
+      <th style="text-align: center;">姓名</th>
+
+      
+    </tr> 
+  </thead>
+  <tbody>
+    
+    <tr >
+    <td>网站开发</td>
+      <td>计应1504</td>
+      <td>2015002606</td>
+      <td>李四</td>
+    </tr>   
+     <tr >
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr >
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr >
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr >
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr >
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr >
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr >
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr><tr >
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr >
+    <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    
+    
+    
+    
+
+  </tbody>
+</table>
+</div>
+
+<button class="layui-btn" style=" float:right; margin-right: 10px">提交</button>
+ </div>
+ <div id="stu_info_fy" style=""></div>       
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+// 文件上传
+layui.use('upload', function(){
+  layui.upload({
+    url: '' //上传接口
+    ,success: function(res){ //上传成功后的回调
+      console.log(res)
+    }
+  });
+  
+  layui.upload({
+    url: 'inmages'
+    ,elem: '#test' //指定原始元素，默认直接查找class="layui-upload-file"
+    ,method: 'get' //上传接口的http类型
+    ,success: function(res){
+      LAY_demo_upload.src = res.url;
+    }
+  });
+});
+
+//分页
+layui.use(['laypage', 'layer'], function(){
+  var laypage = layui.laypage
+  ,layer = layui.layer;
+ laypage({
+    cont: 'stu_info_fy'
+    ,pages: 5
+  });
+  
+});
+</script>
+
+
+
+</html>

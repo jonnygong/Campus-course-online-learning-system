@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-设置</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="mask hidden"></div>
+<div class="login-panel js-loginPanel hidden">
+    <div class="login-header">
+        <span class="close js-close">关闭</span>
+    </div>
+    <div class="login-content">
+        <ul class="login-title js-tabTitle cf">
+            <!-- js -->
+            <li class="active fl">用户登录</li>
+            <li class="fl">找回密码</li>
+        </ul>
+        <!-- login -->
+        <div class="login-form js-forms hidden">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="输入密码">
+                </div>
+                <button type="submit" class="form-button">
+                    立即登录
+                </button>
+            </form>
+        </div>
+        <!-- find password -->
+        <div class="login-form js-forms">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="请输入你的真实姓名">
+                </div>
+                <button type="submit" class="form-button">
+                    提交重置密码邮件
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="header">
+    <div class="header-in cf">
+        <div class="logo fl">
+            <a href="../index.html"><img src="../images/logo3.png" alt=""></a>
+        </div>
+        <ul class="nav fl">
+            <li class="nav-item"><a href="../course/course-list.html">全部课程</a></li>
+        </ul>
+        <div class="user fr">
+            <div class="user-avatar js-userAvatar fr">
+                <img src="../images/small.jpg" alt="">
+
+                <!-- not login -->
+                <ul class="user-menu notlogin hidden">
+                    <li class="user-text">
+                        <a href="#">身份: 游客</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">请登录...</a>
+                    </li>
+                </ul>
+                <!-- already login -->
+                <ul class="user-menu js-userMenu login">
+                    <li class="user-text">
+                        <a href="#">学号: 201502525</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="stu-index.html">个人中心</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="stu-lesson.html">我的学习</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="../index.html">退出登录</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="user-nav fr">
+                <a href="#">学生</a>
+            </div>
+        </div>
+        <div class="search fr cf">
+            <div class="search-type fl">
+                <!-- js -->
+                <span class="selected-type js-select">课程</span>
+                <b class="bottom-arr"></b>
+                <!-- js -->
+                <ul class="search-list js-selectList hidden">
+                    <li>课程</li>
+                    <li>用户</li>
+                    <li>资源</li>
+                </ul>
+            </div>
+            <div class="search-content fl">
+                <form action="">
+                    <input class="search-input" type="text" placeholder="请输入内容">
+                </form>
+            </div>
+            <button type="submit" class="search-btn fr"></button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- code here -->
+
+    <div class="bg-other">
+        <div class="bg-other-in">
+            <div class="bg-other-l">
+                <div class="bg-other-l-in">
+                    <img src="../images/tx.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="bg-other-r">
+                <h3 class="user-name clearfix">
+                    <span>全栈梦想师JonnyGong</span>
+                </h3>
+
+                <p class="about-info">全栈工程师</p>
+                <p class="user-desc">这位同学很懒，木有签名的说～</p>
+            </div>
+        </div>
+    </div>
+    <div class="tea-main">
+        <div class="tea-main-in">
+            <div class="tea-main-l">
+
+                <ul>
+                    <li><a href="stu-index.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>个人主页</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                    <li><a href="stu-lesson.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>我的课程</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="stu-question.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>我的提问</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="stu-note.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>我的笔记</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+
+                    <li><a href="stu-acc.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>个人设置</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="tea-main-r">
+                <div class="tea-main-r-t">
+                    <ul>
+
+                        <li><a href="stu-information.html">个人信息</a></li>
+                        <li><a href="stu-postin.html">操作记录</a></li>
+                    </ul>
+
+
+                </div>
+
+
+                <div class="tea-main-r-b">
+                    <div class="setting setting-height paddingBtoom">
+                        <div class="contentBox">
+                            <table class="oplog-list">
+                                <tr>
+                                    <th>类型</th>
+                                    <th>登录时间</th>
+                                    <th>城市</th>
+                                    <th>IP</th>
+                                    <th>登录设备</th>
+                                </tr>
+                                <tr>
+                                    <td>账号登录</td>
+                                    <td>2017.03.08 14:05</td>
+                                    <td>上海</td>
+                                    <td>115.231.102.4</td>
+                                    <td>web</td>
+                                </tr>
+                                <tr>
+                                    <td>账号登录</td>
+                                    <td>2017.03.04 10:22</td>
+                                    <td>上海</td>
+                                    <td>115.231.105.3</td>
+                                    <td>PC</td>
+                                </tr>
+                                <tr>
+                                    <td>账号登录</td>
+                                    <td>2017.03.04 10:22</td>
+                                    <td>杭州</td>
+                                    <td>115.231.102.4</td>
+                                    <td>web</td>
+                                </tr>
+                                <tr>
+                                    <td>账号登录</td>
+                                    <td>2017.03.04 10:22</td>
+                                    <td>上海</td>
+                                    <td>115.231.103.4</td>
+                                    <td>PC</td>
+                                </tr>
+                                <tr>
+                                    <td>账号登录</td>
+                                    <td>2017.03.04 10:22</td>
+                                    <td>杭州</td>
+                                    <td>115.231.102.3</td>
+                                    <td>PC</td>
+                                </tr>
+                                <tr>
+                                    <td>账号登录</td>
+                                    <td>2017.03.04 10:22</td>
+                                    <td>杭州</td>
+                                    <td>115.231.142.3</td>
+                                    <td>web</td>
+                                </tr>
+                                <tr>
+                                    <td>账号登录</td>
+                                    <td>2017.03.04 10:22</td>
+                                    <td>杭州</td>
+                                    <td>115.231.102.3</td>
+                                    <td>web</td>
+                                </tr>
+
+
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<div class="footer">
+    <div class="footer-in">
+        <div class="footer-link cf">
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+        </div>
+        <p>Copyright © 2017 domain.com All Rights Reserved</p>
+        <p>京ICP备 1234567890</p>
+    </div>
+</div>
+<div class="backtop"></div>
+<script src="../libs/jquery/jquery.min.js"></script>
+<!-- 全局使用（表单验证及登录框） -->
+<script src="../libs/jquery-validation/jquery.validate.min.js"></script>
+<script src="../libs/jquery-validation/localization/messages_zh.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

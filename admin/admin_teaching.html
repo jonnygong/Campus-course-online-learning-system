@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layui.css"  media="all">
+
+</head>
+<body>
+<div class="mask hidden"></div>
+<div class="login-panel js-loginPanel hidden">
+    <div class="login-header">
+        <span class="close js-close">关闭</span>
+    </div>
+    <div class="login-content">
+        <ul class="login-title js-tabTitle cf">
+            <!-- js -->
+            <li class="active fl">用户登录</li>
+            <li class="fl">找回密码</li>
+        </ul>
+        <!-- login -->
+        <div class="login-form js-forms hidden">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="输入密码">
+                </div>
+                <button type="submit" class="form-button">
+                    立即登录
+                </button>
+            </form>
+        </div>
+        <!-- find password -->
+        <div class="login-form js-forms">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="请输入你的真实姓名">
+                </div>
+                <button type="submit" class="form-button">
+                    提交重置密码邮件
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="header">
+    <div class="header-in cf">
+        <div class="logo fl">
+            <a href="#"><img src="images/logo3.png" alt=""></a>
+        </div>
+        <ul class="layui-nav" style="width: 360px; float: left; margin-left: 45px;">
+              <li class="layui-nav-item"><a href="admin_user.html" style="color: #FFF;">用户管理</a></li>
+              <li class="layui-nav-item"><a href="admin_teaching.html" style="color: #FFF;">教学管理</a></li>
+              <li class="layui-nav-item"><a href="admin_basicinfo.html" style="color: #FFF;">基本信息设置</a></li>
+            </ul>
+        <div class="user fr">
+            <div class="user-avatar js-userAvatar fr">
+                <img src="images/small.jpg" alt="">
+
+                <!-- not login -->
+                <ul class="user-menu js-userMenu notlogin">
+                    <li class="user-text">
+                        <a href="#">身份: 游客</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">请登录...</a>
+                    </li>
+                </ul>
+                <!-- already login -->
+                <ul class="user-menu login hidden">
+                    <li class="user-text">
+                        <a href="#">学号: 201502525</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">个人中心</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">我的学习</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">退出登录</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="user-nav fr">
+                <a href="#">admin</a>
+                <a href="#">注销</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- code here -->
+    <div class="index-main">
+        <div class="mag_menu" >
+<!-- 左侧导航-->
+        <div class="layui-side jqamdin-left-bar" style="margin-top: 80px;">
+            <!--子菜单项-->
+            <div class="sub-menu">
+                <ul class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item" data-bind="0" style="color: #FFF;">
+                        <a href="javascript:;" data-title="专业管理">
+                            <span>专业管理</span>
+                            <em class="layui-nav-more"></em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd >
+                                <a href="#"  data-title="专业添加" class="showBtn" data-width="700px" data-height="380px" data-url="admin/adm_t_maj_add.html" >
+                                    <span style="font-size: 13px;">信息添加</span>
+                                </a>
+                                 <dd >
+                                <a href="#"  data-title="专业修改" class="showBtn" data-width="700px" data-height="380px" data-url="admin/adm_t_maj_upd.html" >
+                                    <span style="font-size: 13px;">信息修改</span>
+                                </a>
+                                 <dd >
+                                <a href="#"  data-title="专业搜索" class="showBtn" data-width="700px" data-height="380px" data-url="admin/adm_t_maj_sear.html" >
+                                    <span style="font-size: 13px;">信息搜索</span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <ul class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item" data-bind="0" style="color: #FFF;">
+                        <a href="javascript:;" data-title="班级管理">
+                            <span>班级管理</span>
+                            <em class="layui-nav-more"></em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="#" data-title="添加" class="showBtn"  data-width="700px" data-height="600px" data-url="admin/adm_t_cla_add.html" >
+                                    <span style="font-size: 13px;">信息添加</span>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="#" data-title="修改" class="showBtn"  data-width="700px" data-height="600px" data-url="admin/adm_t_cla_sear.html" >
+                                    <span style="font-size: 13px;">信息修改</span>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="#" data-title="查询" class="showBtn"  data-width="700px" data-height="600px" data-url="admin/adm_t_cla_upd.html" >
+                                    <span style="font-size: 13px;">信息查询</span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+
+                <ul class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item" data-bind="0" style="color: #FFF;">
+                        <a href="javascript:;" data-title="教学管理">
+                            <span>课程管理</span>
+                            <em class="layui-nav-more"></em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                
+                                <a href="#" data-title="添加" class="showBtn" data-width="530px" data-height="400px" data-url="admin/adm_t_cour_add.html" >
+                                    <span style="font-size: 13px;">课程添加</span>
+                                </a>
+                            </dd>
+                            <dd>
+                            <a href="#" data-title="修改" class="showBtn" data-width="750px" data-height="600px" data-url="admin/adm_t_cour_upd.html" >
+                                    <span style="font-size: 13px;">课程修改</span>
+                                </a>
+                            </dd>
+                            <dd>
+                                <a href="#" data-title="查询"class="showBtn" data-width="750px" data-height="600px" data-url="admin/adm_t_cour_search.html" >
+                                    <span style="font-size: 13px;">课程查询</span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+                <ul class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item" data-bind="0" style="color: #FFF;">
+                        <a href="javascript:;" data-title="教师团队管理">
+                            <span >教师团队管理</span>
+                            <em class="layui-nav-more"></em>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                               <a href="#" data-title="添加"class="showBtn" data-width="650px" data-height="400px" data-url="admin/adm_t_team_add.html" >
+                                <span style="font-size: 13px;">信息添加</span>
+                                </a>
+                            </dd>
+                            <dd>
+                               <a href="#" data-title="修改"class="showBtn" data-width="650px" data-height="400px" data-url="admin/adm_t_team_upd.html" >
+                                <span style="font-size: 13px;">信息修改</span>
+                                </a>
+                            </dd>
+                            <dd>
+                               <a href="#" data-title="查询"class="showBtn" data-width="650px" data-height="400px" data-url="admin/adm_t_team_sear.html" >
+                                <span style="font-size: 13px;">信息查询</span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="backtop"></div>
+<!--
+<script src="http://cdn.bootcss.com/es5-shim/4.5.9/es5-shim.min.js
+"></script>
+<script src="http://cdn.bootcss.com/es5-shim/4.5.9/es5-sham.min.js"></script>
+<script src="http://cdn.bootcss.com/babel-standalone/6.23.1/babel.min.js"></script>
+-->
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+layui.use('layer', function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+  
+  //触发事件
+  $(".showBtn").on('click', function () {
+    var oArea = [];
+    oArea.push($(this).data("width"));
+    oArea.push($(this).data("height"));
+    var oUrl = $(this).data("url");
+    var oTitle = $(this).data("title");
+    layer.open({
+      type: 2, 
+      content:oUrl, //这里content是一个普通的String
+      area: oArea ,//自定义文本域宽高
+      title:oTitle
+    });
+  })
+  
+  
+});
+</script>
+
+</body>
+</html>

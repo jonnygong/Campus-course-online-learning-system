@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>专业修改</title>
+    <!-- load css -->
+     <link rel="stylesheet" href="../css/layui.css"  media="all">
+
+</head>
+<style type="text/css">
+    th,td,table{
+        text-align: center;
+    }
+    .layui-table td, .layui-table th{padding: 0px;width: 50px;height: 25px;}
+</style>
+
+<body style="width:600px; height:300px;padding:20px; margin: 0 auto;">
+       
+      <input type="text" name="title" required  lay-verify="required" placeholder="  请输入需搜索的关键字" autocomplete="off" style=" height: 30px; width:180px; float:left; margin-left:12px;line-height:30px">
+<!-- 按钮代码 -->
+<button class="layui-btn" style=" float: right; margin-right:12px">搜索</button>
+    <!-- 表格代码 -->
+    <div style="padding: 10px;clear: both;">
+        <table class="layui-table"  >
+  <colgroup>
+    <col width="60">
+    <col width="100">
+    <col width="50">
+    <col>
+  </colgroup>
+  <thead >
+    <tr>
+
+      <th style="text-align: center;">序号</th>
+      <th style="text-align: center;">专业名称</th>
+       <th style="text-align: center;">操作</th>  
+    </tr> 
+  </thead>
+  <tbody>
+    <tr>
+    <td>1</td>
+      <td>移动互联</td>
+      <td><a class="showBtn " style="" data-width="400px" data-height="220px" data-url="adm_t_maj_upd_next.html" style="float: right;"  data-title="修改内容">修改</a></td>
+    </tr>
+    <tr>
+    <td>2</td>
+      <td>网站开发</td>
+      <td><a class="showBtn " style="" data-width="400px" data-height="220px" data-url="adm_t_maj_upd_next.html" style="float: right;"  data-title="修改内容">修改</a></td>
+      
+    </tr>
+     <tr>
+    <td>3</td>
+      <td>数字媒体</td>
+      <td><a class="showBtn " style="" data-width="400px" data-height="200px" data-url="adm_t_maj_upd_next.html" style="float: right;"  data-title="修改内容">修改</a></td>
+
+      
+    </tr>
+       </tr>
+     <tr>
+    <td>4</td>
+      <td>应用电子物联网方向</td>
+      <td><a class="showBtn " style="" data-width="400px" data-height="220px" data-url="adm_t_maj_upd_next.html" style="float: right;"  data-title="修改内容">修改</a></td>
+      
+    </tr>
+  </tbody>
+</table>
+
+
+
+ </div>       
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+layui.use('layer', function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+  
+ //触发事件
+  $(".showBtn").on('click', function () {
+    var oArea = [];
+    oArea.push($(this).data("width"));
+    oArea.push($(this).data("height"));
+    var oUrl = $(this).data("url");
+    var oTitle = $(this).data("title");
+    layer.open({
+      type: 2, 
+      content:oUrl, //这里content是一个普通的String
+      area: oArea ,//自定义文本域宽高
+      title:oTitle
+    });
+  })
+  
+  
+});
+</script>
+
+
+
+</html>

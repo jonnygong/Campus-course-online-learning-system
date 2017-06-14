@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心-笔记</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="mask hidden"></div>
+<div class="login-panel js-loginPanel hidden">
+    <div class="login-header">
+        <span class="close js-close">关闭</span>
+    </div>
+    <div class="login-content">
+        <ul class="login-title js-tabTitle cf">
+            <!-- js -->
+            <li class="active fl">用户登录</li>
+            <li class="fl">找回密码</li>
+        </ul>
+        <!-- login -->
+        <div class="login-form js-forms hidden">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="输入密码">
+                </div>
+                <button type="submit" class="form-button">
+                    立即登录
+                </button>
+            </form>
+        </div>
+        <!-- find password -->
+        <div class="login-form js-forms">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="请输入你的真实姓名">
+                </div>
+                <button type="submit" class="form-button">
+                    提交重置密码邮件
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="header">
+    <div class="header-in cf">
+        <div class="logo fl">
+            <a href="../index.html"><img src="../images/logo3.png" alt=""></a>
+        </div>
+        <ul class="nav fl">
+            <li class="nav-item"><a href="../course/course-list.html">全部课程</a></li>
+        </ul>
+        <div class="user fr">
+            <div class="user-avatar js-userAvatar fr">
+                <img src="../images/small.jpg" alt="">
+
+                <!-- not login -->
+                <ul class="user-menu notlogin hidden">
+                    <li class="user-text">
+                        <a href="#">身份: 游客</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">请登录...</a>
+                    </li>
+                </ul>
+                <!-- already login -->
+                <ul class="user-menu js-userMenu login">
+                    <li class="user-text">
+                        <a href="#">学号: 201502525</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="stu-index.html">个人中心</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="stu-lesson.html">我的学习</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="../index.html">退出登录</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="user-nav fr">
+                <a href="#">学生</a>
+            </div>
+        </div>
+        <div class="search fr cf">
+            <div class="search-type fl">
+                <!-- js -->
+                <span class="selected-type js-select">课程</span>
+                <b class="bottom-arr"></b>
+                <!-- js -->
+                <ul class="search-list js-selectList hidden">
+                    <li>课程</li>
+                    <li>用户</li>
+                    <li>资源</li>
+                </ul>
+            </div>
+            <div class="search-content fl">
+                <form action="">
+                    <input class="search-input" type="text" placeholder="请输入内容">
+                </form>
+            </div>
+            <button type="submit" class="search-btn fr"></button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- code here -->
+
+    <div class="bg-other">
+        <div class="bg-other-in">
+            <div class="bg-other-l">
+                <div class="bg-other-l-in">
+                    <img src="../images/tx.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="bg-other-r">
+                <h3 class="user-name clearfix">
+                    <span>全栈梦想师JonnyGong</span>
+                </h3>
+
+                <p class="about-info">全栈工程师</p>
+                <p class="user-desc">这位同学很懒，木有签名的说～</p>
+            </div>
+        </div>
+    </div>
+    <div class="tea-main">
+        <div class="tea-main-in">
+            <div class="tea-main-l">
+
+                <ul>
+                    <li><a href="stu-index.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>个人主页</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                    </a>
+                    </li>
+                    <li><a href="stu-lesson.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>我的课程</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="stu-question.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>我的提问</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="stu-note.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>我的笔记</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+
+                    <li><a href="stu-information.html">
+                        <i class="fa fa-hand-peace-o" aria-hidden="true"></i>
+                        <span>个人设置</span>
+                        <i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tea-main-r">
+                <div class="tea-main-r-in">
+                    <div class="tea-main-r-nav">
+                        我的笔记
+                        <button class="takenote">发笔记</button>
+                    </div>
+                    <div class = "bg-model" style="position:absolute;top:0%;left:0%;display:none;background:rgba(0,0,0,0.5);width:100%;height:100%;position:fixed;z-index:9">
+                        　　<div class = 'con-model' style="position: absolute;left: 18%;top: 10%;border-radius: 8px;width: 65%;height: 80%;background-color: #fff;z-index:99">
+                        　　
+
+
+
+
+                        <div class="index-left">
+                            <h2 class="new-save-title">发表笔记</h2>
+                            <div id="js-inputques" class="inputques">
+                                <div class="quesdetail clearfix">
+                                    <span class="ques-label first-label">*</span>
+                                    <div class="question-area">
+                                        <input type="text"  id="ques-title" class="ipt autocomplete" maxlength="255" name="title" placeholder="请一句话说明你的问题，以问号结尾"/>
+
+                                        <dl class="send-area-result">
+                                        </dl>
+                                    </div>
+                                </div>
+                                <textarea class="form-text"></textarea>
+                                <div class="mbottom">
+                                    <span class="ques-lal">*</span>
+                                    <div id="tag-title" class="new-tags ques-tag defaultbox">
+                                        <p class="new-tag-info">选择问题分类，最多可选3个</p>
+                                        <!-- <p class="tag-tip">您最多可以从以下选择3个标签哟！</p> -->
+                                        <div id="js-tags" class="taglist clearfix">
+                                            <a href="javascript:;" class="save-list-tag" data-id="12" name="Android">Android</a>
+                                            <a href="javascript:;" class="save-list-tag" data-id="22" name="AngularJS">AngularJS</a>
+                                            <a href="javascript:;" class="save-list-tag" data-id="24" name="Bootstrap">Bootstrap</a>
+                                            <a href="javascript:;" class="save-list-tag" data-id="28" name="C">C</a>
+                                            <a href="javascript:;" class="save-list-tag" data-id="38" name="C#">C#</a>
+                                            <a href="javascript:;" class="save-list-tag" data-id="30" name="C++">C++</a>
+                                            <a href="javascript:;" class="save-list-tag" data-id="34" name="Cocos2d-x">Cocos2d-x</a>
+                                            <a href="javascript:;" class="save-list-tag" data-id="25" name="CSS3">CSS3</a>
+
+                                        </div>
+                                        <p class="errortip firse"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-fa">
+                                <button id="js-submit" class="btn btn-red">发布<span> (Ctrl+Enter)</span></button><br/><br/><br/><br/>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="tea-main-r-content fl">
+                        <!-- 修改 -->
+                        <h3><a href="##">前端面试题总结 HTTP\浏览器篇</a></h3>cookie和session的机制是什么？有什么区别？会话（Session）跟踪是Web程序中常用的技术，用来跟踪用户的整个会话，它可以弥补http协议无状态的不足。常用的会话跟踪技术是cookie与session。cookie通过在客户端记录信息确定用户身份，session通过在服务器端记录信息确定用户身份。cookie可以解决http的无状态的问题，与服务器进行交互，作为http规范存在。它具有极高的简便性、可扩展性和可用性，也可以通过加密和SSL技术来提高其安全性。因此推荐使用cookie作为标识而不是身份验证的工具。cookie的缺点
+                        （1） 大小和数目受限制。浏览器对一个域cookie的条目数有上限要求，且每个cookie的大小不得超过4kb。
+                        （2）存在安全性问题，易被人拦截。
+                        （3）需要指定域，不可以跨域
+                        （4）浪费带宽，因为我每次请求一个新的页面，cookie都会被自动发送过去。
+                        （5）有的移动端浏览器不支持cookie或浏览器禁用cookie
+                        （6）有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+</div>
+<div class="footer">
+    <div class="footer-in">
+        <div class="footer-link cf">
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+        </div>
+        <p>Copyright © 2017 domain.com All Rights Reserved</p>
+        <p>京ICP备 1234567890</p>
+    </div>
+</div>
+<div class="backtop"></div>
+<script src="../libs/jquery/jquery.min.js"></script>
+<!-- 全局使用（表单验证及登录框） -->
+<script src="../libs/jquery-validation/jquery.validate.min.js"></script>
+<script src="../libs/jquery-validation/localization/messages_zh.js"></script>
+<script src="../js/main.js"></script>
+<script>
+    //加入购物车点击事件
+    $(".takenote").click(function () {
+        $(".bg-model").fadeTo(300,1)
+        //隐藏窗体的滚动条
+        $("body").css({ "overflow": "hidden" });
+    });
+
+    //模态框OK按钮点击事件
+    $(".bg-model-ok").click(function () {
+        $(".bg-model").hide();
+        //显示窗体的滚动条
+        $("body").css({ "overflow": "visible" });
+    }).hover(function () {
+        $(this).css({ "backgroundColor": "#8CC8C8" });
+    }, function () {
+        $(this).css({ "backgroundColor": "#8CD4E6" });
+    });
+
+
+    //点击空白隐藏
+    $(".bg-model").click(function(){
+        $(".bg-model").hide();
+    })
+
+    $(".con-model").click(function(e){
+        e.stopPropagation();
+
+    })
+</script>
+</body>
+</html>

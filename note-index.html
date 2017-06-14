@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <title>
+        教你八步提高网站的访问速度
+    </title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="mask hidden"></div>
+<div class="login-panel js-loginPanel hidden">
+    <div class="login-header">
+        <span class="close js-close">关闭</span>
+    </div>
+    <div class="login-content">
+        <ul class="login-title js-tabTitle cf">
+            <!-- js -->
+            <li class="active fl">用户登录</li>
+            <li class="fl">找回密码</li>
+        </ul>
+        <!-- login -->
+        <div class="login-form js-forms">
+            <form action="#" id="loginForm">
+                <div class="form-control pseudo-element js-login-type">
+                    <input type="radio" id="example1" name="usertpye" class="pseudo-radio" value="0" checked/>
+                    <label for="example1"></label><span>学生</span>
+                    <input type="radio" id="example2" name="usertpye" class="pseudo-radio" value="1"/>
+                    <label for="example2"></label><span>教师</span>
+                    <input type="radio" id="example3" name="usertpye" class="pseudo-radio" value="2"/>
+                    <label for="example3"></label><span>专家</span>
+                </div>
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号/工号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="password" class="form-input" name="password" placeholder="输入密码">
+                </div>
+                <button type="submit" class="form-button">
+                    立即登录
+                </button>
+            </form>
+        </div>
+        <!-- find password -->
+        <div class="login-form js-forms hidden">
+            <form action="#" id="findPwd">
+                <div class="form-control icon-user ">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号/工号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="realname" placeholder="请输入你的真实姓名">
+                </div>
+                <button type="submit" class="form-button">
+                    提交重置密码邮件
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="header">
+    <div class="header-in cf">
+        <div class="logo fl">
+            <a href="index.html"><img src="images/logo3.png" alt=""></a>
+        </div>
+        <ul class="nav fl">
+            <li class="nav-item"><a href="course/course-list.html">全部课程</a></li>
+        </ul>
+        <div class="user fr">
+            <div class="user-avatar js-userAvatar fr">
+                <img src="images/small.jpg" alt="">
+
+                <!-- not login -->
+                <ul class="user-menu js-userMenu notlogin">
+                    <li class="user-text">
+                        <a href="#">身份: 游客</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">请登录...</a>
+                    </li>
+                </ul>
+                <!-- already login -->
+                <ul class="user-menu login hidden">
+                    <li class="user-text">
+                        <a href="#">学号: 201502525</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">个人中心</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">我的学习</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">退出登录</a>
+                    </li>
+                </ul>
+
+            </div>
+
+
+            <div class="user-nav fr">
+                <a href="#" class="js-login">登录</a>
+            </div>
+        </div>
+        <div class="search fr cf">
+            <div class="search-type fl">
+                <!-- js -->
+                <span class="selected-type js-select">课程</span>
+                <b class="bottom-arr"></b>
+                <!-- js -->
+                <ul class="search-list js-selectList hidden">
+                    <li>课程</li>
+                    <li>用户</li>
+                    <li>资源</li>
+                </ul>
+            </div>
+            <div class="search-content fl">
+                <form action="">
+                    <input class="search-input" type="text" placeholder="请输入内容">
+                </form>
+            </div>
+            <button type="submit" class="search-btn fr"></button>
+        </div>
+    </div>
+</div>
+
+<!--头部结束-->
+<div class="container">
+    <!-- code here -->
+    <div class="index-main">
+        <div class="main-left">
+            <div class="mleft-top">
+                <a href="#">手记</a>
+                <span>\ &nbsp;&nbsp;教你八步提高网站的访问速度</span>
+            </div>
+
+            <div class="mleft-head">
+                <h1 class="mleft-title">教你八步提高网站的访问速度</h1>
+                <div class="mleft-txt">
+                    <div class="txt-text">
+                        <span class="spacer-l">1小时前</span>
+                        <span class="spacer-l">6浏览</span>
+                        <a href="#" class="spacer-l ">0评论</a>
+                        <a href="#" class="spscer-r">编辑</a>
+                    </div>
+                </div>
+                <div class="mleft-txt2">
+                    <p>
+                        CDN全称Content Delivery
+                        Network，即内容分发网络。其基本思路是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。其目的是使用户可就近取得所需内容，解决
+                        Internet网络拥挤的状况，提高用户访问网站的响应速度。
+                        之所以用CDN就是为了缓解自己服务器的压力，同时提高访问速度。
+                        打个比方：去饭店吃饭，点了一桌子菜，有酸辣土豆丝、麻婆豆腐、毛血旺、麻辣鱼、新疆大盘鸡等等，这些菜需要这个饭店的厨师挨个做，按照顺序必须做完上一个才能做下一道菜，这样一桌子菜需要将近一个小时才能做完。因为饭店生意火爆，但因为只有一个厨师，所以有点忙不过来。这时候饭店老板就给饭店伙计说：“你去隔壁老王饭店招呼声，让他帮忙做一份毛血旺和新疆大盘鸡。然后再到隔壁老宋饭店让他帮忙做个麻辣鱼。”这样一来，整桌菜只用了半个小时就上齐了，客人吃的高兴，老板干的开心，老王和老宋又能从别人那吃到回扣一样很乐意，皆大欢喜！
+                        在这里面，饭店就是你自己的服务器，老王和老宋就是CDN加速节点，酸辣土豆丝和麻婆豆腐就是你本地的js、css文件，
+                        毛血旺、麻辣鱼和新疆大盘鸡就相当于一些需要缓存的公用样式表或js库（比如bootstrap.css、jquery.js等），客人就相当于访问你网站的用户。因此CDN可以简单来说就是从别人的服务器上拿你需要的东西。
+                    </p>
+                </div>
+                <!--  <div class="mleft-txt3">
+                     <div class="txt3-text">
+                        <span class="spacer2-l">相关标签</span>
+                        <a href="#" class="spacer2-r">PHP</a>
+                     </div>
+                 </div> -->
+
+                <div class="mleft-pic">
+                    <a href="#">
+                        <img src="images/tx.jpg" class="pic-img">
+                    </a>
+                </div>
+
+                <div class="mleft-txt4">
+                    <h2>相关阅读</h2>
+                    <ul>
+                        <li>
+                            <h3><a href="#">PHP已经21岁了</a></h3>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">PHP程序员的一生</a></h3>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">学习PHP的数组总结【经验】</a></h3>
+                        </li>
+
+                        <li>
+                            <h3><a href="#">在php中，对数组的应用</a></h3>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mleft-txt5">
+                    <textarea class="txt5-textarea"></textarea>
+                    <div class="txt5-btn">
+                        <button>评论</button>
+                    </div>
+                </div>
+
+                <!-- <div class="mleft-txt6">
+                    <p>全部评论</p>
+                    <span class="txt6-comment">0条</span>
+                </div>
+
+                <div class="mleft-txt7">
+                    <div class="txt7-text">
+
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="main-right">
+            <div class="right-top">
+                <div class="top-pic">
+                    <img src="images/tx.jpg"">
+                </div>
+                <div class="top-text1">
+                    <p>学号124255</p>
+                </div>
+                <div class="top-text2">
+                    <p>学生</p>
+                </div>
+                <div class="top-text3">
+                    <p>这个同学很懒，什么都没有留下</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-in">
+        <div class="footer-link cf">
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+            <a href="#" target="_blank">
+                友情链接
+            </a>
+        </div>
+        <p>
+            Copyright © 2017 domain.com All Rights Reserved
+        </p>
+        <p>
+            京ICP备 1234567890
+        </p>
+    </div>
+</div>
+<div class="backtop">
+</div>
+<script src="libs/jquery/jquery.min.js">
+</script>
+<script src="js/main.js">
+</script>
+</body>
+</html>

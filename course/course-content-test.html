@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>课程详情页</title>
+    <link rel="stylesheet" href="../css/iconfonts-arrow/iconfont.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="mask hidden"></div>
+<div class="login-panel js-loginPanel hidden">
+    <div class="login-header">
+        <span class="close js-close">关闭</span>
+    </div>
+    <div class="login-content">
+        <ul class="login-title js-tabTitle cf">
+            <!-- js -->
+            <li class="active fl">用户登录</li>
+            <li class="fl">找回密码</li>
+        </ul>
+        <!-- login -->
+        <div class="login-form js-forms hidden">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="输入密码">
+                </div>
+                <button type="submit" class="form-button">
+                    立即登录
+                </button>
+            </form>
+        </div>
+        <!-- find password -->
+        <div class="login-form js-forms">
+            <form action="#">
+                <div class="form-control icon-user">
+                    <input type="text" class="form-input" name="s_number" placeholder="输入您的学号">
+                </div>
+                <div class="form-control icon-pw">
+                    <input type="text" class="form-input" name="password" placeholder="请输入你的真实姓名">
+                </div>
+                <button type="submit" class="form-button">
+                    提交重置密码邮件
+                </button>
+            </form>
+        </div>
+    </div>
+
+</div>
+<div class="header">
+    <div class="header-in cf">
+        <div class="logo fl">
+            <a href="../index.html"><img src="../images/logo3.png" alt=""></a>
+        </div>
+        <ul class="nav fl">
+            <li class="nav-item"><a href="course-list.html">全部课程</a></li>
+            <li class="nav-item"><a href="#great-course">精品课程</a></li>
+            <li class="nav-item"><a href="#">教师风采</a></li>
+            <li class="nav-item"><a href="#">优秀学生</a></li>
+        </ul>
+        <div class="user fr">
+            <div class="user-avatar js-userAvatar fr">
+                <img src="http://s.stu.126.net/res/images/headImg/small.jpg" alt="">
+
+                <!-- not login -->
+                <ul class="user-menu js-userMenu notlogin">
+                    <li class="user-text">
+                        <a href="#">身份: 游客</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">请登录...</a>
+                    </li>
+                </ul>
+                <!-- already login -->
+                <ul class="user-menu login hidden">
+                    <li class="user-text">
+                        <a href="#">学号: 201502525</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">个人中心</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">我的学习</a>
+                    </li>
+                    <li class="menu-text">
+                        <a href="#">退出登录</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="user-nav fr">
+                <a href="#" class="js-login">登录</a>
+            </div>
+        </div>
+        <div class="search fr cf">
+            <div class="search-type fl">
+                <!-- js -->
+                <span class="selected-type js-select">课程</span>
+                <b class="bottom-arr"></b>
+                <!-- js -->
+                <ul class="search-list js-selectList hidden">
+                    <li>课程</li>
+                    <li>用户</li>
+                    <li>资源</li>
+                </ul>
+            </div>
+            <div class="search-content fl">
+                <form action="">
+                    <input class="search-input" type="text" placeholder="请输入内容">
+                </form>
+            </div>
+            <button type="submit" class="search-btn fr"></button>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- code here -->
+    <div class="couse-detail">
+        <div class="couse-detail-classification ">
+            <ul class=" couse fl">
+                <li class="couse-item"><a href="#"> 首页 ></a></li>
+                <li class="couse-item"><a href="#"> 全部课程 ></a></li>
+                <li class="couse-item"><a href="#"> 课程开发 ></a></li>
+                <li class="couse-item"><a href="#"> 编程开发 ></a></li>
+                <li class="couse-item"><a href="#"> 课程详情</a></li>
+
+            </ul>
+
+        </div>
+        <div class="couse-detail-introduction course-shadow fl">
+            <div class="couse-detail-introduction_left fl"><img src="../images/course-content.jpg" width="435" height="250"></div>
+            <div class="couse-detail-introduction_right fl ">
+                <div class="couse-detail-introduction_right_top">
+                    <h1>Laravel实战：任务管理系统</h1>
+                    <div class="couse-detail-introduction_right_topfont">
+                        <span class="course-detail-info">课程负责人：<span>吴龙</span></span>
+                        <span class="course-detail-info">学分：<span>2 学分</span></span>
+                        <span class="course-detail-info">学时：8 学时</span>
+                    </div>
+
+
+                </div>
+                <div class="couse-detail-introduction_right_foot ">
+                    <h2>课程简介</h2>
+                    <p class="couse-detail-introduction_right_footfont">
+                        Laravel框架是世界上最流行的PHP开发框架，没有之一。近年来Laravel以强大、安全、优雅等特性迅速占据了PHP开发框架第一份额的宝座。现在Laravel框架已成为大型互联网公司及PHP攻城狮们的首选框架。
+                    </p>
+                    <input type="submit" name="register" value="开始学习" class="btn_btn-submit disabled btn_enabled js-login"
+                           tabindex="6">
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="couse-detail-content fl">
+            <div class="couse-detail-content_left course-shadow fl">
+                <ul class=" couse fl">
+                    <li class="couse-content-item"><a href="../student/stu-course-content.html"> 视频</a></li>
+                    <li class="couse-content-item"><a href="course-content-doc.html"> 文档 </a></li>
+                    <li class="couse-content-item active"><a href="course-content-test.html"> 试题 </a></li>
+                    <li class="couse-content-item"><a href="course-content-qanda.html"> 问答</a></li>
+
+                </ul>
+            </div>
+            <div class="couse-detail-content_lefter course-shadow fl">
+
+                <div class="couse-detail-content_lefter_top fl">
+                    <div class="couse-detail-content_lefter_topin_doc fl js-login">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-ppt"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>课时一</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">所属课程名称</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl js-login">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-ppt"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>课时二</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">所属课程名称</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl js-login">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-ppt"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>课时三</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">所属课程名称</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl js-login">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-ppt"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>课时四</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">所属课程名称</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="couse-detail-content_lefter_topin_doc fl js-login">
+                        <a href="#">
+                            <div class="couse-detail-content_lefter_topin_docleft fl">
+                                <i class="file-icon icon-ppt"></i>
+                            </div>
+                            <div class="couse-detail-content_lefter_topin_docrig fl">
+                                <h1>课时五</h1>
+                                <div class="couse-detail-content_lefter_topin_docrig_font fl">所属课程名称</div>
+                            </div>
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="page">
+
+                    <span class="disabled_page">首页</span>
+                    <span class="disabled_page">上一页</span>
+                    <a href="javascript:void(0)" class="active text-page-tag">1</a>
+                    <a class="text-page-tag" href="/course/list?page=2">2</a>
+                    <a class="text-page-tag" href="/course/list?page=3">3</a>
+                    <a class="text-page-tag" href="/course/list?page=4">4</a>
+                    <a class="text-page-tag" href="/course/list?page=5">5</a>
+                    <a class="text-page-tag" href="/course/list?page=6">6</a>
+                    <a class="text-page-tag" href="/course/list?page=7">7</a>
+                    <a href="/course/list?page=2">下一页</a>
+                    <a href="/course/list?page=28">尾页</a>
+
+
+                </div>
+
+            </div>
+            <div class="course-content-sidebar fr">
+                <div class="couse-detail-content_right course-shadow">
+                    <h3>课程简介：</h3>
+                    <div class="couse-detail-content_right_footfont">
+                        &nbsp;&nbsp;需要有一定的网页基础知识如HTML、CSS样式等，并且已经学习完成《PHP入门篇》对PHP已经有了简单的了解，如变量、常量、数据类型等。全面的掌握PHP的理论知识与实践中的应用方法，提高编程能力与掌握网页开发技能。
+                    </div>
+
+                </div>
+                <div class="couse-detail-content_righter course-shadow">
+                    <div id="course-teacher-slider">
+                        <ul class="">
+                            <li class="teacher-slider-item">
+                                <a target="_blank" href="#" class="teacher-item">
+                                    <img class="teacher-slider-avatar" src="http://img.mukewang.com/583f11e40001c79506400960-100-100.jpg">
+                                    <span class="teacher-slider-name">七月在夏天</span>
+                                    <span class="teacher-slider-job">神秘讲师“七月”</span>
+                                </a>
+                            </li>
+                            <li class="teacher-slider-item">
+                                <a target="_blank" href="#" class="teacher-item">
+                                    <img class="teacher-slider-avatar" src="http://img.mukewang.com/583f11e40001c79506400960-100-100.jpg">
+                                    <span class="teacher-slider-name">七月在夏天</span>
+                                    <span class="teacher-slider-job">神秘讲师“七月”</span>
+                                </a>
+                            </li>
+                            <li class="teacher-slider-item">
+                                <a target="_blank" href="#" class="teacher-item">
+                                    <img class="teacher-slider-avatar" src="http://img.mukewang.com/583f11e40001c79506400960-100-100.jpg">
+                                    <span class="teacher-slider-name">七月在夏天</span>
+                                    <span class="teacher-slider-job">神秘讲师“七月”</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="slider-arrow slider-arrow-left" id="prev"><i class="iconfont icon-fanhui"></i></span>
+                    <span class="slider-arrow slider-arrow-right" id="next"><i class="iconfont icon-gengduo"></i></span>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="footer">
+    <div class="footer-in">
+        <div class="footer-link cf">
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+            <a href="#" target="_blank">友情链接</a>
+        </div>
+        <p>Copyright © 2017 domain.com All Rights Reserved</p>
+        <p>京ICP备 1234567890</p>
+    </div>
+</div>
+<div class="backtop"></div>
+<script src="../libs/jquery/jquery.min.js"></script>
+<!-- 全局使用（表单验证及登录框） -->
+<script src="../libs/jquery-validation/jquery.validate.min.js"></script>
+<script src="../libs/jquery-validation/localization/messages_zh.js"></script>
+<script src="../js/main.js"></script>
+<!-- 右侧教师轮播 -->
+<script src="../js/jquery.marquee.js"></script>
+<script src="../js/slide.js"></script>
+</body>
+</html>

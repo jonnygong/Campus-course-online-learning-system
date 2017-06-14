@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <!-- load css -->
+     <link rel="stylesheet" href="../css/layui.css"  media="all">
+
+</head>
+<style type="text/css">
+    th,td,table{
+        text-align: center;
+    }
+        .layui-table td, .layui-table th{padding: 0px;width: 50px;height: 25px;}
+</style>
+
+<body style="width: 600px; height: 300px;padding:20px; margin: 0 auto;">
+
+
+<!-- 输入框代码 -->
+       
+      <input type="text" name="title" required  lay-verify="required" placeholder="请输入查找关键词" autocomplete="off" style=" height: 32px; width:180px; float:left; margin-left: 10px; ">
+<!-- 按钮代码 -->
+<input name="" type="button" class="layui-btn" value="搜索" style=" height: 35px; float: right; margin-right: 10px;">
+    <!-- 表格代码 -->
+    <div style="padding: 10px;clear: both;">
+        <table class="layui-table"  >
+  <colgroup>
+    <col width="100">
+    <col width="100">
+    <col width="100">
+    <col width="100">
+  </colgroup>
+  <thead >
+    <tr>
+      <th style="text-align: center;">姓名</th>
+      <th style="text-align: center;">教工号</th>
+      <th style="text-align: center;">团队</th>
+    
+    </tr> 
+  </thead>
+  <tbody>
+    <tr>
+      <td>张三</td>
+      <td>20150000</td>
+      <td>网站A组</td>
+    
+    </tr>
+    <tr>
+      <td>张四</td>
+      <td>20150001</td>
+      <td>网站B组</td>
+     
+    </tr>
+    <tr>
+      <td>张回复</td>
+      <td>20150002</td>
+      <td>网站B组</td>
+    
+    </tr>
+
+  </tbody>
+</table>
+ </div>       
+</body>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use('element', function(){
+  var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+  
+  //监听导航点击
+  element.on('nav(demo)', function(elem){
+    //console.log(elem)
+    layer.msg(elem.text());
+  });
+});
+</script>
+
+
+
+</html>
